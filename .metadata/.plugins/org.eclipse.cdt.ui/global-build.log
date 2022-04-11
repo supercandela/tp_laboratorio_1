@@ -1,0 +1,4 @@
+22:13:45 **** Incremental Build of configuration Debug for project TP_[1] ****
+Info: Internal Builder is used for build
+gcc -o TP_[1].exe "src\\CustomFunctions.o" "src\\GetNumbers.o" "src\\TP_[1].o" 
+Info: Nothing to build for TP_[1]

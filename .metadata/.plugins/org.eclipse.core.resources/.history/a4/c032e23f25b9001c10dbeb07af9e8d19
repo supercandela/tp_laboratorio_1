@@ -1,0 +1,63 @@
+/*
+ ============================================================================
+ Name        : TP_[1].c
+ Author      : Candela Bogado
+ División    : 1 "E"
+ Copyright   : © Candela Bogado - 2022
+ Description : Trabajo Práctico 1 - Laboratorio 1
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "CustomFunctions.h"
+
+
+/**
+* \brief Función principal
+* \param Void - Ninguno
+* \return Int hardcodeado en 0, para cerrar el programa.
+*
+*/
+int main(void) {
+	setbuf(stdout, NULL);
+
+	printf("¡Bienvenido al sistema de cálculo de precios!\nPresione \"Enter\" para continuar...");
+	getchar();
+
+	int opcionIngresada;
+	int exitValueGetInt;
+
+	//Menú Principal
+	printf("1. Ingresar Kilómetros: ( km=x)\n");
+	printf("2. Ingresar Precio de Vuelos: (Aerolíneas=y, Latam=z)\n- Precio vuelo Aerolíneas:\n- Precio vuelo Latam:\n");
+	printf("3. Calcular todos los costos:\na) Tarjeta de débito (descuento 10%%)\nb) Tarjeta de crédito (interés 25%%)\nc) Bitcoin (1BTC -> 4606954.55 Pesos Argentinos)\nd) Mostrar precio por km (precio unitario)\ne) Mostrar diferencia de precio ingresada (Latam - Aerolíneas)\n");
+	printf("4. Informar Resultados\n\"Latam:\na) Precio con tarjeta de débito: r\nb) Precio con tarjeta de crédito: r\nc) Precio pagando con bitcoin : r\nd) Precio unitario: r\nAerolíneas:\na) Precio con tarjeta de débito: r\nb) Precio con tarjeta de crédito: r\nc) Precio pagando con bitcoin : r\nd) Precio unitario: r\nLa diferencia de precio es : r \"\n");
+	printf("5. Carga forzada de datos\n");
+	printf("6. Salir\n");
+
+	exitValueGetInt = getOption(&opcionIngresada, 1, 6, 3);
+	printf("opcionIngresada: %d", opcionIngresada);
+
+	if (exitValueGetInt == 0) {
+		switch(opcionIngresada) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+		}
+
+	} else {
+		printf("La opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos.");
+	}
+
+	return 0;
+}
