@@ -1,0 +1,201 @@
+/*
+ * CustomFunctions.c
+ *
+ *  Author: Candela Bogado
+ *  Created on: 10 abr. 2022
+ *
+ *  Description: TP1 - Custom Functions
+ */
+
+#include <stdio.h>
+#include "GetNumbers.h"
+#include "DoCalculations.h"
+
+/**
+* \brief Prints the menu on the screen
+* \param float amount of kilometers
+* \param float Aerolíneas Argentinas Fee
+* \param float LATAM Airlines Fee
+* \return Int - 0 : success
+*
+*/
+int printMenu(float kilometers, float aerolineasFee, float latamFee) {
+	if (kilometers > 0) {
+		printf("1. Ingresar Kilómetros: %.2fkm.\n", kilometers);
+	} else {
+		printf("1. Ingresar Kilómetros: Aún no se ha ingresado ningún valor.\n");
+	}
+	printf("2. Ingresar Precio de Vuelos: \n");
+	if(aerolineasFee > 0) {
+		printf("- Precio vuelo Aerolíneas Argentinas: $%.2f.\n", aerolineasFee);
+	} else {
+		printf("- Precio vuelo Aerolíneas Argentinas: Aún no se ha ingresado ningún valor.\n");
+	}
+	if(latamFee > 0) {
+		printf("- Precio vuelo LATAM Airlines: $%.2f.\n", latamFee);
+	} else {
+		printf("- Precio vuelo LATAM Airlines: Aún no se ha ingresado ningún valor.\n");
+	}
+	printf("3. Calcular todos los costos:\na) Tarjeta de débito (descuento 10%%)\n"
+			"b) Tarjeta de crédito (interés 25%%)\nc) Bitcoin (1BTC -> 4606954.55 Pesos Argentinos)\n"
+			"d) Mostrar precio por km (precio unitario)\ne) Mostrar diferencia de precio ingresada (LATAM Airlines - Aerolíneas Argentinas)\n");
+//	printf("4. Informar Resultados\n\"Latam:\na) Precio con tarjeta de débito: r\nb) Precio con tarjeta de crédito: r\nc) Precio pagando con bitcoin : r\nd) Precio unitario: r\nAerolíneas:\na) Precio con tarjeta de débito: r\nb) Precio con tarjeta de crédito: r\nc) Precio pagando con bitcoin : r\nd) Precio unitario: r\nLa diferencia de precio es : r \"\n");
+//	printf("5. Carga forzada de datos\n");
+	printf("6. Salir\n");
+
+	return 0;
+}
+
+/**
+* \brief Asks the end user for the option of the menu
+* \param int pointer to selected option
+* \param int minimum accepted value
+* \param int maximum accepted value
+* \param int number of tries the user has
+* \return Int - 0 : success - (-1) : error
+*
+*/
+int getOption(int *pNumber, int minimumValue, int maximumValue, int tries) {
+	int validation;
+	fflush( stdin );
+	validation = -1;
+	if (pNumber != NULL && tries > 0){
+		do {
+			printf("Ingrese una opción: ");
+			validation = getInt(pNumber, minimumValue, maximumValue);
+			tries--;
+			if (validation != 0 && tries > 0) {
+				printf("La opción ingresada no es correcta.\nPor favor, ingrese una opción entre %d y %d. "
+						"Usted tiene %d intentos.\n", minimumValue, maximumValue, tries);
+			}
+		} while (validation != 0 && tries > 0);
+	}
+	return validation;
+}
+
+/**
+* \brief Asks the end user for the amount of kilometers
+* \param float pointer to kilometers
+* \param float minimum accepted value
+* \param float maximum accepted value
+* \param int number of tries the user has
+* \return Int - 0 : success - (-1) : error
+*
+*/
+int getKilometers(float *pKilometers, float minimumValue, float maximumValue, int tries) {
+	int validation;
+	fflush( stdin );
+	validation = -1;
+	if (pKilometers != NULL && tries > 0){
+		do {
+			printf("Ingrese la cantidad de kilómetros: ");
+			validation = getFloat(pKilometers, minimumValue, maximumValue);
+			tries--;
+			if (validation != 0 && tries > 0) {
+				printf("El valor de kilómetros ingresado no es correcto.\nPor favor, ingrese un nuevo valor entre %.2f y %.2f kilómetros. "
+						"Usted tiene %d intentos.\n", minimumValue, maximumValue, tries);
+			}
+		} while (validation != 0 && tries > 0);
+	}
+	return validation;
+}
+
+/**
+* \brief Prints the submenu for airlines on the screen
+* \param float Aerolíneas Argentinas Fee
+* \param float LATAM Airlines Fee
+* \return Int - 0 : success
+*
+*/
+int printSubMenu(float aerolineasFee, float latamFee) {
+	if(aerolineasFee > 0) {
+		printf("- Precio vuelo Aerolíneas Argentinas: $%.2f.\n", aerolineasFee);
+	} else {
+		printf("- Precio vuelo Aerolíneas Argentinas: Aún no se ha ingresado ningún valor.\n");
+	}
+	if(latamFee > 0) {
+		printf("- Precio vuelo LATAM Airlines: $%.2f.\n", latamFee);
+	} else {
+		printf("- Precio vuelo LATAM Airlines: Aún no se ha ingresado ningún valor.\n");
+	}
+	printf("1. Ingrese precio para vuelo Aerolíneas Argentinas.\n");
+	printf("2. Ingrese precio para vuelo LATAM Airlines.\n");
+	printf("3. Volver al menú anterior.\n");
+	return 0;
+}
+
+/**
+* \brief Asks the end user for the fee of the travel
+* \param float pointer to fee
+* \param float minimum accepted value
+* \param float maximum accepted value
+* \param int number of tries the user has
+* \return Int - 0 : success - (-1) : error
+*
+*/
+int getFee(float *pFee, float minimumValue, float maximumValue, int tries) {
+	int validation;
+	fflush( stdin );
+	validation = -1;
+	if (pFee != NULL && tries > 0){
+		do {
+			printf("Ingrese el precio del vuelo $");
+			validation = getFloat(pFee, minimumValue, maximumValue);
+			tries--;
+			if (validation != 0 && tries > 0) {
+				printf("El valor ingresado no es correcto.\nPor favor, ingrese un nuevo valor entre $%.2f y $%.2f. "
+						"Usted tiene %d intentos.\n", minimumValue, maximumValue, tries);
+			}
+		} while (validation != 0 && tries > 0);
+	}
+	return validation;
+}
+
+/**
+* \brief Calculate all costs
+* \param float amount of kilometers
+* \param float fee
+* \param float pointer to discounted value
+* \param float pointer to increased value
+* \param float pointer to converted value
+* \param float pointer to unit price
+* \return Int - 0 : success - (-1) : error
+*
+*/
+int calculateCosts(float kilometers, float fee, float *pDiscountedValue, float *pIncreasedValue, float *pConvertedValue, float *pUnitPrice) {
+	int validation;
+	float discountRate;
+	float interestRate;
+	float commonCurrencyValue;
+	validation = -1;
+	discountRate = 10;
+	interestRate = 25;
+	commonCurrencyValue = 4606954.55;
+
+	if (pDiscountedValue != NULL && pIncreasedValue != NULL && pConvertedValue != NULL && pUnitPrice != NULL && kilometers > 0 && fee > 0) {
+		calculateDiscount(pDiscountedValue, fee, discountRate);
+		calculateInterest(pIncreasedValue, fee, interestRate);
+		convertToCriptoCurrency(pConvertedValue, fee, commonCurrencyValue);
+		calculateUnitPrice(pUnitPrice, fee, kilometers);
+		validation = 0;
+	}
+	return validation;
+}
+
+/**
+* \brief Calculate price difference
+* \param float pointer to price difference
+* \param float pointer to first fee
+* \param float pointer to second fee
+* \return Int - 0 : success - (-1) : error
+*
+*/
+int calculatePriceDifference(float *pPriceDifference, float firstValue, float secondValue) {
+	int validation;
+	validation = -1;
+
+	if (pPriceDifference != NULL && firstValue > 0 && secondValue > 0){
+		validation = calculatePriceDifference(pPriceDifference, firstValue, secondValue);
+	}
+	return validation;
+}

@@ -8,6 +8,7 @@
 #ifndef GETNUMBERS_H_
 #define GETNUMBERS_H_
 
-int getInt(int *pNumber, int minimumValue, int maximumValue, int tries);
+int getInt(int *pNumber, int minimumValue, int maximumValue);
+int getFloat(float *pNumber, float minimumValue, float maximumValue);
 
 #endif /* GETNUMBERS_H_ */

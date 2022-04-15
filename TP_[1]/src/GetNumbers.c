@@ -9,28 +9,44 @@
 
 /**
 * \brief Asks the end user for an interger
-* \param pointer int
+* \param int pointer
 * \param int minimum accepted value
 * \param int maximum accepted value
-* \param int number of tries the user has
-* \return Int - 0 : success - (-1) : error
+* \return Int (0 : success - (-1) : error)
 *
 */
-int getInt(int *pNumber, int minimumValue, int maximumValue, int tries) {
+int getInt(int *pNumber, int minimumValue, int maximumValue) {
+	int validation;
 	int aux;
-	fflush( stdin );
-	printf("Ingrese un número: ");
-	scanf("%d", &aux);
-	tries--;
-	while ((aux < minimumValue || aux > maximumValue) && tries > 0) {
-		printf("El número ingresado no es correcto.\nPor favor, ingrese un número entre %d y %d. Usted tiene %d intentos.", minimumValue, maximumValue, tries);
+	validation = -1;
+	if (pNumber != NULL && minimumValue <= maximumValue) {
 		scanf("%d", &aux);
-		tries--;
+		if (aux >= minimumValue && aux <= maximumValue) {
+			*pNumber = aux;
+			validation = 0;
+		}
 	}
-	if (aux >= minimumValue && aux <= maximumValue) {
-		printf("aux: %d", aux);
-		*pNumber = aux;
-		return 0;
+	return validation;
+}
+
+/**
+* \brief Asks the end user for a float
+* \param float pointer
+* \param float minimum accepted value
+* \param float maximum accepted value
+* \return Int (0 : success - (-1) : error)
+*
+*/
+int getFloat(float *pNumber, float minimumValue, float maximumValue) {
+	int validation;
+	float aux;
+	validation = -1;
+	if (pNumber != NULL && minimumValue <= maximumValue) {
+		scanf("%f", &aux);
+		if (aux >= minimumValue && aux <= maximumValue) {
+			*pNumber = aux;
+			validation = 0;
+		}
 	}
-	return -1;
+	return validation;
 }

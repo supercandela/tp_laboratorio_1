@@ -1,0 +1,37 @@
+/*
+ * DoCalculations.c
+ *
+ *  Author: Candela Bogado
+ *  Created on: 15 abr. 2022
+ */
+
+#include <stdio.h>
+
+//a) Tarjeta de débito (descuento 10%%)
+
+/**
+* \brief Calculates discount from a value
+* \param float pointer to discounted value
+* \param float original value
+* \param float discount rate (between 0% and 100%)
+* \return Int (0 : success - (-1) : error)
+*
+*/
+int calculateDiscount(float *pDiscountedValue, float originalValue, float discountRate) {
+	int validation;
+	float aux;
+	validation = -1;
+	if (pDiscountedValue != NULL && originalValue > 0 && discountRate >= 0 && discountRate <=100) {
+		aux = originalValue - (originalValue * discountRate / 100);
+	}
+	return validation;
+}
+
+
+
+
+
+//b) Tarjeta de crédito (interés 25%%)
+//c) Bitcoin (1BTC -> 4606954.55 Pesos Argentinos)
+//d) Mostrar precio por km (precio unitario)
+//e) Mostrar diferencia de precio ingresada (LATAM Airlines - Aerolíneas Argentinas)
