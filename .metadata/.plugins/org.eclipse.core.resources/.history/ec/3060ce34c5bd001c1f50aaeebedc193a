@@ -61,7 +61,7 @@ int main(void) {
 			switch(userOption) {
 				case 1:
 					if (getKilometers(&kilometers, 1, 30000, 3) < 0) {
-						printf("\nEl valor ingresado para kilómetros no es válido y se quedó sin intentos.\n"
+						printf("El valor ingresado para kilómetros no es válido y se quedó sin intentos.\n"
 								"Revise los valores y vuelva a intentarlo en unos minutos.\n");
 					}
 					break;
@@ -79,7 +79,7 @@ int main(void) {
 									break;
 							}
 							if (exitValueGetFee < 0) {
-								printf("\nEl valor ingresado para el vuelo no es válido y se quedó sin intentos.\n"
+								printf("El valor ingresado para el vuelo no es válido y se quedó sin intentos.\n"
 										"Revise los valores y vuelva a intentarlo en unos minutos.\n");
 							}
 						}
@@ -103,20 +103,17 @@ int main(void) {
 						}
 					} else {
 						if (kilometers <= 0) {
-							printf("\n========================================================================================="
-									"===========================\n");
+							printf("\n====================================================================================================================\n");
 							printf("\nAún no ingresó kilómetros.\nPor favor, ingrese kilómetros para hacer los cálculos\n");
 						}
 						if (aerolineasFee <= 0) {
-							printf("\n========================================================================================="
-									"===========================\n");
-							printf("\nAún no ingresó el precio del vuelo de Aerolíneas Argentinas.\n"
+							printf("\n====================================================================================================================\n");
+							printf("\nAún no ingresó el precio del vuelo de Aerolíneas Argentinas.\n "
 										"Por favor, ingrese el valor para hacer los cálculos\n");
 						}
 						if (latamFee <= 0) {
-							printf("\n=========================================================================================="
-									"==========================\n");
-							printf("\nAún no ingresó el precio del vuelo de LATAM Airlines.\n"
+							printf("\n====================================================================================================================\n");
+							printf("\nAún no ingresó el precio del vuelo de LATAM Airlines.\n "
 										"Por favor, ingrese el valor para hacer los cálculos\n");
 						}
 					}
@@ -125,8 +122,7 @@ int main(void) {
 					if (aerolineasWithDiscount > 0 && aerolineasWithInterest > 0 && aerolineasToBitcoin > 0
 							&& aerolineasUnitPrice > 0 && latamWithDiscount > 0 && latamWithInterest > 0
 							&& latamToBitcoin > 0 && latamUnitPrice > 0) {
-						printf("\n=========================================================================================="
-								"==========================\n");
+						printf("\n====================================================================================================================\n");
 						printf("\nKilómetros ingresados: %.2fKm.\n", kilometers);
 						printf("\nPrecio Aerolíneas Argentinas: $%.2f\n", aerolineasFee);
 						printResultsPerAirline(aerolineasWithDiscount, aerolineasWithInterest, aerolineasToBitcoin, aerolineasUnitPrice);
@@ -134,8 +130,7 @@ int main(void) {
 						printResultsPerAirline(latamWithDiscount, latamWithInterest, latamToBitcoin, latamUnitPrice);
 						printResultsDifference(priceDifference);
 					} else {
-						printf("\n==============================================================================================="
-								"=====================\n"
+						printf("\n====================================================================================================================\n"
 								"\nLos costos de los vuelos aún no fueron calculados.\n"
 										"Por favor, realice los cálculos para mostrar los resultados.\n");
 					}
@@ -150,9 +145,9 @@ int main(void) {
 							printf("\n=============================================================================================="
 									"======================\n");
 							printf("\nKilómetros ingresados: %.2f\n", kilometers);
-							printf("\nPrecio Aerolíneas Argentinas: $ %.2f\n", aerolineasFee);
+							printf("Precio Aerolíneas Argentinas: $ %.2f\n", aerolineasFee);
 							printResultsPerAirline(aerolineasWithDiscount, aerolineasWithInterest, aerolineasToBitcoin, aerolineasUnitPrice);
-							printf("\nPrecio LATAM Airlines: $ %.2f\n", latamFee);
+							printf("Precio LATAM Airlines: $ %.2f\n", latamFee);
 							printResultsPerAirline(latamWithDiscount, latamWithInterest, latamToBitcoin, latamUnitPrice);
 							printResultsDifference(priceDifference);
 						}

@@ -22,9 +22,9 @@
 int printMenu(float kilometers, float aerolineasFee, float latamFee) {
 	printf("\n====================================================================================================================\n");
 	if (kilometers > 0) {
-		printf("\n1. Ingresar Kilómetros: %.2fkm.\n", kilometers);
+		printf("1. Ingresar Kilómetros: %.2fkm.\n", kilometers);
 	} else {
-		printf("\n1. Ingresar Kilómetros: Aún no se ha ingresado ningún valor.\n");
+		printf("1. Ingresar Kilómetros: Aún no se ha ingresado ningún valor.\n");
 	}
 	printf("2. Ingresar Precio de Vuelos: \n");
 	if(aerolineasFee > 0) {
@@ -62,12 +62,12 @@ int getOption(int *pNumber, int minimumValue, int maximumValue, int tries) {
 	validation = -1;
 	if (pNumber != NULL && tries > 0){
 		do {
-			printf("\n====================================================================================================================\n");
 			printf("\nIngrese una opción: ");
 			validation = getInt(pNumber, minimumValue, maximumValue);
 			tries--;
 			if (validation != 0 && tries > 0) {
-				printf("\nLa opción ingresada no es correcta.\nPor favor, ingrese una opción entre %d y %d. "
+				printf("\n====================================================================================================================\n");
+				printf("La opción ingresada no es correcta.\nPor favor, ingrese una opción entre %d y %d. "
 						"Usted tiene %d intentos.\n", minimumValue, maximumValue, tries);
 			}
 		} while (validation != 0 && tries > 0);
@@ -95,6 +95,7 @@ int getKilometers(float *pKilometers, float minimumValue, float maximumValue, in
 			validation = getFloat(pKilometers, minimumValue, maximumValue);
 			tries--;
 			if (validation != 0 && tries > 0) {
+				printf("\n====================================================================================================================\n");
 				printf("\nEl valor de kilómetros ingresado no es correcto.\nPor favor, ingrese un nuevo valor entre %.2f y %.2f kilómetros. "
 						"Usted tiene %d intentos.\n", minimumValue, maximumValue, tries);
 			}
@@ -111,18 +112,17 @@ int getKilometers(float *pKilometers, float minimumValue, float maximumValue, in
 *
 */
 int printSubMenu(float aerolineasFee, float latamFee) {
-	printf("\n====================================================================================================================\n");
 	if(aerolineasFee > 0) {
-		printf("\n- Precio vuelo Aerolíneas Argentinas: $%.2f.\n", aerolineasFee);
+		printf("- Precio vuelo Aerolíneas Argentinas: $%.2f.\n", aerolineasFee);
 	} else {
-		printf("\n- Precio vuelo Aerolíneas Argentinas: Aún no se ha ingresado ningún valor.\n");
+		printf("- Precio vuelo Aerolíneas Argentinas: Aún no se ha ingresado ningún valor.\n");
 	}
 	if(latamFee > 0) {
 		printf("- Precio vuelo LATAM Airlines: $%.2f.\n", latamFee);
 	} else {
 		printf("- Precio vuelo LATAM Airlines: Aún no se ha ingresado ningún valor.\n");
 	}
-	printf("\n1. Ingrese precio para vuelo Aerolíneas Argentinas.\n");
+	printf("1. Ingrese precio para vuelo Aerolíneas Argentinas.\n");
 	printf("2. Ingrese precio para vuelo LATAM Airlines.\n");
 	printf("3. Volver al menú anterior.\n");
 	return 0;
@@ -143,12 +143,11 @@ int getFee(float *pFee, float minimumValue, float maximumValue, int tries) {
 	validation = -1;
 	if (pFee != NULL && tries > 0){
 		do {
-			printf("\n====================================================================================================================\n");
-			printf("\nIngrese el precio del vuelo $");
+			printf("Ingrese el precio del vuelo $");
 			validation = getFloat(pFee, minimumValue, maximumValue);
 			tries--;
 			if (validation != 0 && tries > 0) {
-				printf("\nEl valor ingresado no es correcto.\nPor favor, ingrese un nuevo valor entre $%.2f y $%.2f. "
+				printf("El valor ingresado no es correcto.\nPor favor, ingrese un nuevo valor entre $%.2f y $%.2f. "
 						"Usted tiene %d intentos.\n", minimumValue, maximumValue, tries);
 			}
 		} while (validation != 0 && tries > 0);
@@ -216,8 +215,8 @@ int calculatePriceDifference(float *pPriceDifference, float firstValue, float se
 *
 */
 int printResultsPerAirline(float discountedPrice, float increasedPrice, float convertedPrice, float unitPrice) {
-	printf("   a) Precio con tarjeta de débito: $ %.2f\n   b) Precio con tarjeta de crédito: $ %.2f\n"
-			"   c) Precio pagando con bitcoin: %.2f BTC\n   d) Precio unitario por kilómetro: $ %.2f\n",
+	printf("a) Precio con tarjeta de débito: $ %.2f\nb) Precio con tarjeta de crédito: $ %.2f\n"
+			"c) Precio pagando con bitcoin: %.2f BTC\nd) Precio unitario por kilómetro: $ %.2f\n",
 			discountedPrice, increasedPrice, convertedPrice, unitPrice);
 	return 0;
 }
@@ -230,7 +229,7 @@ int printResultsPerAirline(float discountedPrice, float increasedPrice, float co
 */
 int printResultsDifference(float priceDifference) {
 
-	printf("\nLa diferencia de precio es: $ %.2f\n", priceDifference);
+	printf("La diferencia de precio es: $ %.2f\n", priceDifference);
 	return 0;
 }
 

@@ -216,8 +216,8 @@ int calculatePriceDifference(float *pPriceDifference, float firstValue, float se
 *
 */
 int printResultsPerAirline(float discountedPrice, float increasedPrice, float convertedPrice, float unitPrice) {
-	printf("   a) Precio con tarjeta de débito: $ %.2f\n   b) Precio con tarjeta de crédito: $ %.2f\n"
-			"   c) Precio pagando con bitcoin: %.2f BTC\n   d) Precio unitario por kilómetro: $ %.2f\n",
+	printf("a) Precio con tarjeta de débito: $ %.2f\nb) Precio con tarjeta de crédito: $ %.2f\n"
+			"c) Precio pagando con bitcoin: %.2f BTC\nd) Precio unitario por kilómetro: $ %.2f\n",
 			discountedPrice, increasedPrice, convertedPrice, unitPrice);
 	return 0;
 }
@@ -230,7 +230,7 @@ int printResultsPerAirline(float discountedPrice, float increasedPrice, float co
 */
 int printResultsDifference(float priceDifference) {
 
-	printf("\nLa diferencia de precio es: $ %.2f\n", priceDifference);
+	printf("La diferencia de precio es: $ %.2f\n", priceDifference);
 	return 0;
 }
 
