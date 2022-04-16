@@ -91,8 +91,8 @@ int main(void) {
 					if (kilometers > 0 && aerolineasFee > 0 && latamFee > 0) {
 						if (calculateCosts(kilometers, aerolineasFee, &aerolineasWithDiscount, &aerolineasWithInterest,
 								&aerolineasToBitcoin, &aerolineasUnitPrice) == 0 && calculateCosts(kilometers, latamFee,
-								&latamWithDiscount, &latamWithInterest, &latamToBitcoin, &latamUnitPrice) == 0
-								&& calculatePriceDifference(&priceDifference, aerolineasFee, latamFee) == 0) {
+										&latamWithDiscount, &latamWithInterest, &latamToBitcoin, &latamUnitPrice) == 0
+										&& calculatePriceDifference(&priceDifference, aerolineasFee, latamFee) == 0) {
 							printf("Valores calculados.\n");
 						}
 					} else {
@@ -127,10 +127,9 @@ int main(void) {
 				case 5:
 					if(forcedLoadWithPrechargeValues(7090, 162965, 159339, &kilometers, &aerolineasFee, &latamFee) == 0) {
 						if (calculateCosts(kilometers, aerolineasFee, &aerolineasWithDiscount, &aerolineasWithInterest,
-								&aerolineasToBitcoin, &aerolineasUnitPrice) == 0 &&
-								calculateCosts(kilometers, latamFee, &latamWithDiscount, &latamWithInterest,
-								&latamToBitcoin, &latamUnitPrice) == 0 &&
-								calculatePriceDifference(&priceDifference, aerolineasFee, latamFee) == 0) {
+								&aerolineasToBitcoin, &aerolineasUnitPrice) == 0 && calculateCosts(kilometers, latamFee,
+										&latamWithDiscount, &latamWithInterest, &latamToBitcoin, &latamUnitPrice) == 0 &&
+										calculatePriceDifference(&priceDifference, aerolineasFee, latamFee) == 0) {
 							printf("Kilómetros ingresados: %.2f\n", kilometers);
 							printf("Precio Aerolíneas Argentinas: $ %.2f\n", aerolineasFee);
 							printResultsPerAirline(aerolineasWithDiscount, aerolineasWithInterest, aerolineasToBitcoin, aerolineasUnitPrice);

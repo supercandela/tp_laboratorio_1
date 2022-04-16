@@ -7,6 +7,8 @@
 
 #include <stdio.h>
 
+//a) Tarjeta de débito (descuento 10%%)
+
 /**
 * \brief Calculates discount from a value
 * \param float pointer to discounted value
@@ -27,6 +29,7 @@ int calculateDiscount(float *pDiscountedValue, float originalValue, float discou
 	return validation;
 }
 
+//b) Tarjeta de crédito (interés 25%%)
 /**
 * \brief Calculates interest from a value
 * \param float pointer to increased value
@@ -47,6 +50,7 @@ int calculateInterest(float *pIncreasedValue, float originalValue, float interes
 	return validation;
 }
 
+//c) Bitcoin (1BTC -> 4606954.55 Pesos Argentinos)
 /**
 * \brief Converts value from common currency to cripto currency
 * \param float pointer to converted value
@@ -67,6 +71,7 @@ int convertToCriptoCurrency(float *pConvertedValue, float originalValue, float c
 	return validation;
 }
 
+//d) Mostrar precio por km (precio unitario)
 /**
 * \brief Calculates unit price
 * \param float pointer to unit price
@@ -87,6 +92,7 @@ int calculateUnitPrice(float *pUnitPrice, float originalValue, float numberOfUni
 	return validation;
 }
 
+//e) Mostrar diferencia de precio ingresada (LATAM Airlines - Aerolíneas Argentinas)
 /**
 * \brief Calculates difference
 * \param float pointer to price difference

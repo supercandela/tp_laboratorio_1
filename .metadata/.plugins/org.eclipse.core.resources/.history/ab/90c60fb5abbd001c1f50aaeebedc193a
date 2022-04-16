@@ -89,12 +89,10 @@ int main(void) {
 					break;
 				case 3:
 					if (kilometers > 0 && aerolineasFee > 0 && latamFee > 0) {
-						if (calculateCosts(kilometers, aerolineasFee, &aerolineasWithDiscount, &aerolineasWithInterest,
-								&aerolineasToBitcoin, &aerolineasUnitPrice) == 0 && calculateCosts(kilometers, latamFee,
-								&latamWithDiscount, &latamWithInterest, &latamToBitcoin, &latamUnitPrice) == 0
-								&& calculatePriceDifference(&priceDifference, aerolineasFee, latamFee) == 0) {
-							printf("Valores calculados.\n");
-						}
+						calculateCosts(kilometers, aerolineasFee, &aerolineasWithDiscount, &aerolineasWithInterest, &aerolineasToBitcoin, &aerolineasUnitPrice);
+						calculateCosts(kilometers, latamFee, &latamWithDiscount, &latamWithInterest, &latamToBitcoin, &latamUnitPrice);
+						calculatePriceDifference(&priceDifference, aerolineasFee, latamFee);
+						printf("Valores calculados.\n");
 					} else {
 						if (kilometers <= 0) {
 							printf("Aún no ingresó kilómetros.\nPor favor, ingrese kilómetros para hacer los cálculos\n");
@@ -125,26 +123,23 @@ int main(void) {
 					}
 					break;
 				case 5:
-					if(forcedLoadWithPrechargeValues(7090, 162965, 159339, &kilometers, &aerolineasFee, &latamFee) == 0) {
-						if (calculateCosts(kilometers, aerolineasFee, &aerolineasWithDiscount, &aerolineasWithInterest,
-								&aerolineasToBitcoin, &aerolineasUnitPrice) == 0 &&
-								calculateCosts(kilometers, latamFee, &latamWithDiscount, &latamWithInterest,
-								&latamToBitcoin, &latamUnitPrice) == 0 &&
-								calculatePriceDifference(&priceDifference, aerolineasFee, latamFee) == 0) {
-							printf("Kilómetros ingresados: %.2f\n", kilometers);
-							printf("Precio Aerolíneas Argentinas: $ %.2f\n", aerolineasFee);
-							printResultsPerAirline(aerolineasWithDiscount, aerolineasWithInterest, aerolineasToBitcoin, aerolineasUnitPrice);
-							printf("Precio LATAM Airlines: $ %.2f\n", latamFee);
-							printResultsPerAirline(latamWithDiscount, latamWithInterest, latamToBitcoin, latamUnitPrice);
-							printResultsDifference(priceDifference);
-						}
-					}
+					forcedLoadWithPrechargeValues(7090, 162965, 159339, &kilometers, &aerolineasFee, &latamFee);
+					calculateCosts(kilometers, aerolineasFee, &aerolineasWithDiscount, &aerolineasWithInterest, &aerolineasToBitcoin, &aerolineasUnitPrice);
+					calculateCosts(kilometers, latamFee, &latamWithDiscount, &latamWithInterest, &latamToBitcoin, &latamUnitPrice);
+					calculatePriceDifference(&priceDifference, aerolineasFee, latamFee);
+					printf("Kilómetros ingresados: %.2f\n", kilometers);
+					printf("Precio Aerolíneas Argentinas: $ %.2f\n", aerolineasFee);
+					printResultsPerAirline(aerolineasWithDiscount, aerolineasWithInterest, aerolineasToBitcoin, aerolineasUnitPrice);
+					printf("Precio LATAM Airlines: $ %.2f\n", latamFee);
+					printResultsPerAirline(latamWithDiscount, latamWithInterest, latamToBitcoin, latamUnitPrice);
+					printResultsDifference(priceDifference);
 					break;
 				case 6:
 					printf("¡Muchas gracias por su visita! Usted salió del programa.\nPara ingresar más datos, vuelva a iniciar.");
 					break;
 			}
 		}
+		//SALE SI SE QUEDA SIN INTENTOS O SI PRESIONA 6
 	} while (userOption != 6 && exitValueGetOption == 0);
 
 	if (exitValueGetOption < 0) {
