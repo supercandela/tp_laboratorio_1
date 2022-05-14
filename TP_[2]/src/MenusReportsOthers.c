@@ -111,7 +111,47 @@ int printSubMenuAddPax(char name[], char lastName[], int passengerType, char fli
 		printf("5. Precio del vuelo: 	$%.2f\n", price);
 	}
 	printf("6. Guardar datos Pasajero\n");
-	printf("7. Volver al inicio\n");
+	printf("7. Volver atrás\n");
+
+	return 0;
+}
+
+/**
+* \brief Prints the sub menu to modify a passenger
+* \param void
+* \return Int - 0 : success
+*
+*/
+int printSubMenuModifyPax(char name[], char lastName[], int passengerType, char flightCode[], float price) {
+	char paxType[15];
+	printf("1. Nombre Pasajero: 	%s\n", name);
+	printf("2. Apellido Pasajero: 	%s\n", lastName);
+	if (passengerType < 1) {
+		printf("3. Tipo de Pasajero:\n");
+	} else {
+		switch(passengerType) {
+			case FIRST_CLASS:
+				strncpy( paxType, "First Class", 15);
+				break;
+			case BUSINESS:
+				strncpy( paxType, "Business", 15);
+				break;
+			case PREMIUM:
+				strncpy( paxType, "Premium", 15);
+				break;
+			case TURIST:
+				strncpy( paxType, "Turist", 15);
+				break;
+		}
+		printf("3. Tipo de Pasajero: 	%s\n", paxType);
+	}
+	printf("4. Código del vuelo: 	%s\n", flightCode);
+	if (price < 1) {
+		printf("5. Precio del vuelo:\n");
+	} else {
+		printf("5. Precio del vuelo: 	$%.2f\n", price);
+	}
+	printf("6. Volver atrás\n");
 
 	return 0;
 }

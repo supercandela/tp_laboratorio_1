@@ -11,6 +11,7 @@
 #include <string.h>
 #include "Passengers.h"
 #include "GetData.h"
+#include "MenusReportsOthers.h"
 
 
 /**
@@ -272,6 +273,29 @@ void showPax(Passengers pax) {
 }
 
 /**
+* \brief Prints passengers lists header
+* \param void
+* \return void
+*
+*/
+void printPaxListHeader(void) {
+	int column_id = -8;
+	int column_text = -30;
+	int column_type = -20;
+	int column_code = -12;
+	int column_price = -15;
+
+	printf("\n==========================================================================================================================\n");
+	printf("\n                                                  LISTADO DE PASAJEROS\n");
+	printf("\n==========================================================================================================================\n");
+
+	printf("+--------+------------------------------+------------------------------+--------------------+------------+---------------+\n");
+	printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n", column_id, " ID", column_text, " Apellido", column_text, " Nombre",
+			column_type, " Tipo", column_code, " Vuelo", column_price, " Precio");
+	printf("+--------+------------------------------+------------------------------+--------------------+------------+---------------+\n");
+}
+
+/**
 * \brief Prints the content of the passengers array
 * \param Passengers Array pointer to array of Passengers
 * \param int array length
@@ -282,21 +306,7 @@ int printPassengersList(Passengers pPax[], int len) {
 	int validation;
 	validation = -1;
 	if (pPax != NULL && len > 0) {
-
-		int column_id = -8;
-		int column_text = -30;
-		int column_type = -20;
-		int column_code = -12;
-		int column_price = -15;
-
-		printf("\n==========================================================================================================================\n");
-		printf("\n                                                  LISTADO DE PASAJEROS\n");
-		printf("\n==========================================================================================================================\n");
-
-		printf("+--------+------------------------------+------------------------------+--------------------+------------+---------------+\n");
-		printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n", column_id, " ID", column_text, " Apellido", column_text, " Nombre",
-				column_type, " Tipo", column_code, " Vuelo", column_price, " Precio");
-		printf("+--------+------------------------------+------------------------------+--------------------+------------+---------------+\n");
+		printPaxListHeader();
 
 		for (int i = 0; i < len; i++) {
 			showPax(pPax[i]);
@@ -335,3 +345,108 @@ int forcedLoadPassengersListWithPrechargeValues(Passengers pPassenger[], int len
 	return validation;
 }
 
+/**
+* \brief Finds a passenger by ID and returns the index position in the array
+* \param Passengers Array pointer to array of Passengers
+* \param int array length
+* \param int id to find
+* \return Int - index position : success - (-1) : error [Invalid length or NULL pointer or passenger not found]
+*/
+int findPassengerById(Passengers pPassenger[], int len_passenger, int id) {
+	int validation = -1;
+	if (pPassenger != NULL && len_passenger > 0 && id > 0) {
+		for (int i = 0; i < len_passenger; i++) {
+			if (pPassenger[i].id == id && pPassenger[i].isEmpty == 0) {
+				validation = i;
+				break;
+			}
+		}
+	}
+	return validation;
+}
+
+/**
+* \brief Modifies the information for the selected passenger
+* \param Passengers Array pointer to array of Passengers
+* \param int array length
+* \param int id to modify
+* \return Int - 0 : success - (-1) : error [Invalid length or NULL pointer or passenger not found]
+*/
+int modifyPassenger(Passengers pPassenger[], int len_passenger, int id) {
+	int validation = -1;
+	int index;
+	int optionSubMenu;
+	int exitValue;
+	if (pPassenger != NULL && len_passenger > 0 && id > 0) {
+		index = findPassengerById(pPassenger, len_passenger, id);
+		if(index != -1){
+			printPaxListHeader();
+			showPax(pPassenger[index]);
+			printf("\n\n");
+			do{
+				printSubMenuModifyPax(pPassenger[index].name, pPassenger[index].lastName, pPassenger[index].passengerType,
+						pPassenger[index].flightCode, pPassenger[index].price);
+				exitValue = getOption(&optionSubMenu, 1, 6, 3);
+				switch(optionSubMenu) {
+					case 1:
+						if (getPassengersName( pPassenger[index].name, LEN_TEXT_CHAR, 3)) {
+							printf("El nombre no fue salvado. Intente nuevamente.\n");
+						}
+						break;
+					case 2:
+						if (getPassengersLastName( pPassenger[index].lastName, LEN_TEXT_CHAR, 3)) {
+							printf("El apellido no fue salvado. Intente nuevamente.\n");
+						}
+						break;
+					case 3:
+						if (getPassengersType( &pPassenger[index].passengerType, 3)) {
+							printf("El tipo de pasajero no fue salvado. Intente nuevamente.\n");
+						}
+						break;
+					case 4:
+						if (getPassengersFlightCode( pPassenger[index].flightCode, LEN_FLIGHT_CODE,3)) {
+							printf("El código del vuelo no fue salvado. Intente nuevamente.\n");
+						}
+						break;
+					case 5:
+						if (getPassengersPrice( &pPassenger[index].price, 1, 5000000,3)) {
+							printf("El precio del vuelo no fue salvado. Intente nuevamente.\n");
+						}
+						break;
+					case 6:
+						break;
+				}
+			} while (exitValue == 0 && optionSubMenu != 6);
+
+		}
+	}
+	return validation;
+}
+
+/**
+* \brief Asks the end user for the id of the passenger to modify
+* \param int pointer to selected id
+* \param int minimum accepted value
+* \param int maximum accepted value
+* \param int number of tries the user has
+* \return Int - 0 : success - (-1) : error
+*
+*/
+int getPaxId(int *pPaxId, int minimumValue, int maximumValue, int tries) {
+	int validation;
+	fflush( stdin );
+	validation = -1;
+	if (pPaxId != NULL && tries > 0){
+		do {
+			printf("\n====================================================================================================================\n");
+			printf("\nIngrese ID del pasajero: ");
+			validation = getInt(pPaxId, minimumValue, maximumValue);
+			tries--;
+			if (validation != 0 && tries > 0) {
+				printf("\nLa opción ingresada no es correcta.\nPor favor, ingrese una opción entre %d y %d. "
+						"Usted tiene %d intentos.\n", minimumValue, maximumValue, tries);
+			}
+		} while (validation != 0 && tries > 0);
+	}
+	return validation;
+}

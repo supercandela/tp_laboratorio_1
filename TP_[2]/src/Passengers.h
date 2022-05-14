@@ -43,5 +43,8 @@ int getFirstEmptyPax(Passengers pPax[], int len);
 void showPax(Passengers pax);
 int printPassengersList(Passengers pPax[], int len);
 int forcedLoadPassengersListWithPrechargeValues(Passengers pPassenger[], int len_passenger);
+int findPassengerById(Passengers pPassenger[], int len_passenger, int id);
+int modifyPassenger(Passengers pPassenger[], int len_passenger, int id);
+int getPaxId(int *pPaxId, int minimumValue, int maximumValue, int tries);
 
 #endif /* PASSENGERS_H_ */

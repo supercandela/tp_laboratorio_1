@@ -14,7 +14,7 @@
 #include "MenusReportsOthers.h"
 #include "Passengers.h"
 
-#define LEN_PAX 10
+#define LEN_PAX 15
 #define LEN_TEXT_CHAR 51
 #define LEN_FLIGHT_CODE 10
 
@@ -33,6 +33,7 @@ int main(void) {
 	int exitValueGetOption;
 	int submenuOption;
 	int exitValueGetOptionSubMenu;
+	int pax_id;
 
 	initPassengers(passenger, LEN_PAX);
 //	INICIALIZAR ESTRUCTURA VUELOS
@@ -100,14 +101,20 @@ int main(void) {
 							}
 						}
 						if (exitValueGetOptionSubMenu < 0) {
-							printf("\n====================================================================================================================\n");
+							printf("\n============================================================================="
+									"=======================================\n");
 							printf("\nLa opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos."
 									"\nEl pasajero no fue agregado.");
 						}
 					} while (submenuOption != 7 && exitValueGetOptionSubMenu == 0);
 					break;
 				case 2:
-					printf("2. Modificar Pasajero\n");
+					exitValueGetOptionSubMenu = getPaxId(&pax_id, 1000, 3001, 3);
+					if (exitValueGetOptionSubMenu == 0) {
+						modifyPassenger(passenger, LEN_PAX, pax_id);
+					} else {
+						printf("\nLa opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos.\n");
+					}
 					break;
 				case 3:
 					printf("3. Baja Pasajero\n");
@@ -116,7 +123,6 @@ int main(void) {
 					printf("4. Informes\n");
 					break;
 				case 5:
-					printf("5. Listado de Pasajeros\n");
 					printPassengersList(passenger, LEN_PAX);
 					break;
 				case 6:
@@ -124,22 +130,33 @@ int main(void) {
 					break;
 				case 7:
 					if (!forcedLoadPassengersListWithPrechargeValues(passenger, LEN_PAX)){
-						printf("Carga de datos exitosa.");
+						printf("\n========================================================================================"
+								"============================\n"
+								"Carga de datos exitosa."
+								"\n======================================================================================="
+								"=============================\n");
 					} else {
-						printf("Carga de datos fallida.");
+						printf("\n========================================================================================"
+								"============================\n"
+								"Carga de datos fallida."
+								"\n======================================================================================="
+								"=============================\n");
 					}
 					break;
 				case 8:
-					printf("\n====================================================================================================================\n"
+					printf("\n============================================================================================="
+							"=======================\n"
 							"\n¡Muchas gracias por su visita!\nUsted salió del programa. Para ingresar más datos, vuelva a iniciar.\n"
-							"\n====================================================================================================================\n");
+							"\n============================================================================================="
+							"=======================\n");
 					break;
 			}
 		}
 	} while (menuOption != 8 && exitValueGetOption == 0);
 
 	if (exitValueGetOption < 0) {
-		printf("\n====================================================================================================================\n");
+		printf("\n======================================================================================================="
+				"=============\n");
 		printf("\nLa opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos.");
 	}
 
