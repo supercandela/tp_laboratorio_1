@@ -1,19 +1,690 @@
-Info: Nothing to build for TP_[1]
-Info: Nothing to build for TP_[1]
-17:52:11 **** Incremental Build of configuration Debug for project TP_[1] ****
+20:22:22 **** Rebuild of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[1].o" "..\\src\\TP_[1].c" 
-gcc -o TP_[1].exe "src\\CustomFunctions.o" "src\\DoCalculations.o" "src\\GetNumbers.o" "src\\TP_[1].o" 
-Info: Nothing to build for TP_[1]
-17:55:59 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+20:32:14 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[1].o" "..\\src\\TP_[1].c" 
-gcc -o TP_[1].exe "src\\CustomFunctions.o" "src\\DoCalculations.o" "src\\GetNumbers.o" "src\\TP_[1].o" 
-Info: Nothing to build for TP_[1]
-Info: Nothing to build for TP_[1]
-Info: Nothing to build for TP_[1]
-18:06:10 **** Incremental Build of configuration Debug for project TP_[1] ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+20:33:12 **** Incremental Build of configuration Debug for project TP_[2] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[1].o" "..\\src\\TP_[1].c" 
-gcc -o TP_[1].exe "src\\CustomFunctions.o" "src\\DoCalculations.o" "src\\GetNumbers.o" "src\\TP_[1].o" 
-Info: Nothing to build for TP_[1]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+20:57:41 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:28:2: warning: implicit declaration of function 'initPassengers' [-Wimplicit-function-declaration]
+   28 |  initPassengers(passenger, LEN_PAX);
+      |  ^~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+..\src\Passengers.c:20:20: error: unknown type name 'Passengers'
+   20 | int initPassengers(Passengers pArray[], int len) {
+      |                    ^~~~~~~~~~
+20:58:34 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+..\src\Passengers.c:20:20: error: unknown type name 'Passengers'
+   20 | int initPassengers(Passengers pArray[], int len) {
+      |                    ^~~~~~~~~~
+21:01:00 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+..\src\Passengers.c:20:20: error: unknown type name 'Passengers'
+   20 | int initPassengers(Passengers pArray[], int len) {
+      |                    ^~~~~~~~~~
+21:03:22 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+17:32:49 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ValidateEntries.o" "..\\src\\ValidateEntries.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+17:42:42 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:26:25: warning: implicit declaration of function 'isInt' [-Wimplicit-function-declaration]
+   26 |   printf("isInt: %d\n", isInt(aux));
+      |                         ^~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+17:44:48 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c:10:19: warning: extra tokens at end of #include directive
+   10 | #include <stdio.h>.
+      |                   ^
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+17:47:52 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c:10:19: warning: extra tokens at end of #include directive
+   10 | #include <stdio.h>.
+      |                   ^
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:26:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   26 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+..\src\GetData.c:27:31: warning: passing argument 1 of 'isInt' makes integer from pointer without a cast [-Wint-conversion]
+   27 |   printf("isInt: %d\n", isInt(aux));
+      |                               ^~~
+      |                               |
+      |                               char *
+In file included from ..\src\GetData.c:11:
+..\src\GetData.h:14:15: note: expected 'int' but argument is of type 'char *'
+   14 | int isInt(int valueToCheck);
+      |           ~~~~^~~~~~~~~~~~
+..\src\GetData.c:28:11: warning: comparison between pointer and integer
+   28 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |           ^~
+..\src\GetData.c:28:34: warning: comparison between pointer and integer
+   28 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |                                  ^~
+..\src\GetData.c:29:13: warning: assignment to 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   29 |    *pNumber = aux;
+      |             ^
+..\src\GetData.c: At top level:
+..\src\GetData.c:42:5: error: conflicting types for 'isInt'
+   42 | int isInt(char pValueToCheck[]) {
+      |     ^~~~~
+In file included from ..\src\GetData.c:11:
+..\src\GetData.h:14:5: note: previous declaration of 'isInt' was here
+   14 | int isInt(int valueToCheck);
+      |     ^~~~~
+..\src\GetData.c: In function 'isInt':
+..\src\GetData.c:45:18: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   45 |  for (i = 0; i < strlen(pValueToCheck); i++) {
+      |                  ^~~~~~
+..\src\GetData.c:45:18: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\GetData.c:12:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   11 | #include "GetData.h"
+  +++ |+#include <string.h>
+   12 | 
+17:49:03 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c:10:19: warning: extra tokens at end of #include directive
+   10 | #include <stdio.h>.
+      |                   ^
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:26:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   26 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+..\src\GetData.c:28:11: warning: comparison between pointer and integer
+   28 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |           ^~
+..\src\GetData.c:28:34: warning: comparison between pointer and integer
+   28 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |                                  ^~
+..\src\GetData.c:29:13: warning: assignment to 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   29 |    *pNumber = aux;
+      |             ^
+..\src\GetData.c: In function 'isInt':
+..\src\GetData.c:45:18: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   45 |  for (i = 0; i < strlen(pValueToCheck); i++) {
+      |                  ^~~~~~
+..\src\GetData.c:45:18: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\GetData.c:12:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   11 | #include "GetData.h"
+  +++ |+#include <string.h>
+   12 | 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+18:57:34 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c:10:19: warning: extra tokens at end of #include directive
+   10 | #include <stdio.h>.
+      |                   ^
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:26:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   26 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+..\src\GetData.c:28:11: warning: comparison between pointer and integer
+   28 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |           ^~
+..\src\GetData.c:28:34: warning: comparison between pointer and integer
+   28 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |                                  ^~
+..\src\GetData.c:30:13: warning: assignment to 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   30 |    *pNumber = aux;
+      |             ^
+..\src\GetData.c: In function 'isInt':
+..\src\GetData.c:46:18: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   46 |  for (i = 0; i < strlen(pValueToCheck); i++) {
+      |                  ^~~~~~
+..\src\GetData.c:46:18: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\GetData.c:12:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   11 | #include "GetData.h"
+  +++ |+#include <string.h>
+   12 | 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+19:00:20 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c:10:19: warning: extra tokens at end of #include directive
+   10 | #include <stdio.h>.
+      |                   ^
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:27:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   27 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+..\src\GetData.c:30:41: warning: passing argument 1 of 'isInt' makes pointer from integer without a cast [-Wint-conversion]
+   30 |   printf("isInt numero: %d %s\n", isInt(numeroEnInt), numeroEnInt);
+      |                                         ^~~~~~~~~~~
+      |                                         |
+      |                                         int
+In file included from ..\src\GetData.c:11:
+..\src\GetData.h:14:16: note: expected 'char *' but argument is of type 'int'
+   14 | int isInt(char pValueToCheck[]);
+      |           ~~~~~^~~~~~~~~~~~~~~
+..\src\GetData.c:30:29: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+   30 |   printf("isInt numero: %d %s\n", isInt(numeroEnInt), numeroEnInt);
+      |                            ~^                         ~~~~~~~~~~~
+      |                             |                         |
+      |                             char *                    int
+      |                            %d
+..\src\GetData.c:31:11: warning: comparison between pointer and integer
+   31 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |           ^~
+..\src\GetData.c:31:34: warning: comparison between pointer and integer
+   31 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |                                  ^~
+..\src\GetData.c:33:13: warning: assignment to 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   33 |    *pNumber = aux;
+      |             ^
+..\src\GetData.c: In function 'isInt':
+..\src\GetData.c:49:18: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   49 |  for (i = 0; i < strlen(pValueToCheck); i++) {
+      |                  ^~~~~~
+..\src\GetData.c:49:18: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\GetData.c:12:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   11 | #include "GetData.h"
+  +++ |+#include <string.h>
+   12 | 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+19:01:36 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c:10:19: warning: extra tokens at end of #include directive
+   10 | #include <stdio.h>.
+      |                   ^
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:27:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   27 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+..\src\GetData.c:30:41: warning: passing argument 1 of 'isInt' makes pointer from integer without a cast [-Wint-conversion]
+   30 |   printf("isInt numero: %d %s\n", isInt(numeroEnInt), numeroEnInt);
+      |                                         ^~~~~~~~~~~
+      |                                         |
+      |                                         int
+In file included from ..\src\GetData.c:11:
+..\src\GetData.h:14:16: note: expected 'char *' but argument is of type 'int'
+   14 | int isInt(char pValueToCheck[]);
+      |           ~~~~~^~~~~~~~~~~~~~~
+..\src\GetData.c:30:29: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+   30 |   printf("isInt numero: %d %s\n", isInt(numeroEnInt), numeroEnInt);
+      |                            ~^                         ~~~~~~~~~~~
+      |                             |                         |
+      |                             char *                    int
+      |                            %d
+..\src\GetData.c:31:11: warning: comparison between pointer and integer
+   31 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |           ^~
+..\src\GetData.c:31:34: warning: comparison between pointer and integer
+   31 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |                                  ^~
+..\src\GetData.c:33:13: warning: assignment to 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   33 |    *pNumber = aux;
+      |             ^
+..\src\GetData.c: In function 'isInt':
+..\src\GetData.c:49:12: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   49 |  int len = strlen(pValueToCheck);
+      |            ^~~~~~
+..\src\GetData.c:49:12: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\GetData.c:12:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   11 | #include "GetData.h"
+  +++ |+#include <string.h>
+   12 | 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+19:03:00 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:28:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   28 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+..\src\GetData.c:31:41: warning: passing argument 1 of 'isInt' makes pointer from integer without a cast [-Wint-conversion]
+   31 |   printf("isInt numero: %d %s\n", isInt(numeroEnInt), numeroEnInt);
+      |                                         ^~~~~~~~~~~
+      |                                         |
+      |                                         int
+In file included from ..\src\GetData.c:12:
+..\src\GetData.h:14:16: note: expected 'char *' but argument is of type 'int'
+   14 | int isInt(char pValueToCheck[]);
+      |           ~~~~~^~~~~~~~~~~~~~~
+..\src\GetData.c:31:29: warning: format '%s' expects argument of type 'char *', but argument 3 has type 'int' [-Wformat=]
+   31 |   printf("isInt numero: %d %s\n", isInt(numeroEnInt), numeroEnInt);
+      |                            ~^                         ~~~~~~~~~~~
+      |                             |                         |
+      |                             char *                    int
+      |                            %d
+..\src\GetData.c:32:11: warning: comparison between pointer and integer
+   32 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |           ^~
+..\src\GetData.c:32:34: warning: comparison between pointer and integer
+   32 |   if (aux >= minimumValue && aux <= maximumValue) {
+      |                                  ^~
+..\src\GetData.c:34:13: warning: assignment to 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   34 |    *pNumber = aux;
+      |             ^
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+19:10:37 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:28:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   28 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+..\src\GetData.c:30:17: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   30 |   numeroEnInt = atoi(aux);
+      |                 ^~~~
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+19:14:00 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:28:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   28 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+..\src\GetData.c:30:17: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   30 |   numeroEnInt = atoi(aux);
+      |                 ^~~~
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+19:19:26 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:29:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   29 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+19:25:21 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:29:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[50]' [-Wformat=]
+   29 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[50]
+      |           char *
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+19:25:57 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:29:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+   29 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[10]
+      |           char *
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+19:28:25 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:28:8: warning: multi-character character constant [-Wmultichar]
+   28 |  aux = 'acme';
+      |        ^~~~~~
+..\src\GetData.c:28:6: error: assignment to expression with array type
+   28 |  aux = 'acme';
+      |      ^
+..\src\GetData.c:30:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[10]' [-Wformat=]
+   30 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[10]
+      |           char *
+22:19:26 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getInt':
+..\src\GetData.c:29:11: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[15]' [-Wformat=]
+   29 |   scanf("%s", &aux);
+      |          ~^   ~~~~
+      |           |   |
+      |           |   char (*)[15]
+      |           char *
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+22:22:07 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+22:42:14 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c:92:5: error: redefinition of 'isInt'
+   92 | int isInt(char pValueToCheck[]) {
+      |     ^~~~~
+..\src\GetData.c:47:5: note: previous definition of 'isInt' was here
+   47 | int isInt(char pValueToCheck[]) {
+      |     ^~~~~
+22:42:17 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c:92:5: error: redefinition of 'isInt'
+   92 | int isInt(char pValueToCheck[]) {
+      |     ^~~~~
+..\src\GetData.c:47:5: note: previous definition of 'isInt' was here
+   47 | int isInt(char pValueToCheck[]) {
+      |     ^~~~~
+22:42:37 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+22:48:47 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:32:2: warning: implicit declaration of function 'getFloat' [-Wimplicit-function-declaration]
+   32 |  getFloat(&numero, 1, 20.50);
+      |  ^~~~~~~~
+..\src\TP_[2].c:33:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+   33 |  printf("Numero: %d\n", numero);
+      |                  ~^     ~~~~~~
+      |                   |     |
+      |                   int   double
+      |                  %f
+..\src\TP_[2].c:37:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+   37 |  printf("Numero: %d\n", numero);
+      |                  ~^     ~~~~~~
+      |                   |     |
+      |                   int   double
+      |                  %f
+..\src\TP_[2].c:41:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+   41 |  printf("Numero: %d\n", numero);
+      |                  ~^     ~~~~~~
+      |                   |     |
+      |                   int   double
+      |                  %f
+..\src\TP_[2].c:45:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+   45 |  printf("Numero: %d\n", numero);
+      |                  ~^     ~~~~~~
+      |                   |     |
+      |                   int   double
+      |                  %f
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+22:49:26 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:32:2: warning: implicit declaration of function 'getFloat' [-Wimplicit-function-declaration]
+   32 |  getFloat(&numero, 1, 20.50);
+      |  ^~~~~~~~
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+22:50:05 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+22:54:14 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getFloat':
+..\src\GetData.c:78:23: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+   78 |    printf("auxNumber %f", auxNumber);
+      |                      ~^   ~~~~~~~~~
+      |                       |   |
+      |                       |   int
+      |                       double
+      |                      %d
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+23:00:30 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+23:06:21 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+23:07:38 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+23:13:11 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:13:18 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+23:15:26 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+23:52:39 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'getArrayOfLetters':
+..\src\GetData.c:124:4: warning: implicit declaration of function 'strncopy'; did you mean 'strncpy'? [-Wimplicit-function-declaration]
+  124 |    strncopy(pChar, auxChar, len);
+      |    ^~~~~~~~
+      |    strncpy
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\GetData.o: in function `getArrayOfLetters':
+C:\Users\super\repos\tp_laboratorio_1\TP_[2]\Debug/../src/GetData.c:124: undefined reference to `strncopy'
+collect2.exe: error: ld returned 1 exit status
+23:53:29 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+23:59:27 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:00:51 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:02:34 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:02:40 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:03:56 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:03:58 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:03:59 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+00:08:23 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'isArrayOfLetters':
+..\src\GetData.c:144:18: warning: 'sizeof' on array function parameter 'pValueToCheck' will return size of 'char *' [-Wsizeof-array-argument]
+  144 |  int len = sizeof(pValueToCheck);
+      |                  ^
+..\src\GetData.c:141:27: note: declared here
+  141 | int isArrayOfLetters(char pValueToCheck[]) {
+      |                      ~~~~~^~~~~~~~~~~~~~~
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:09:23 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:09:50 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:09:58 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:12:49 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:12:57 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:30:47 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:31:56 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:36:17: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   36 |  for(i = 0; i < strlen(nombre); i++) {
+      |                 ^~~~~~
+..\src\TP_[2].c:36:17: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\TP_[2].c:15:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   14 | #include "GetData.h"
+  +++ |+#include <string.h>
+   15 | 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:33:17 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+00:37:56 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" "src\\ValidateEntries.o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+01:17:00 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DisplayOnScreen.o" "..\\src\\DisplayOnScreen.c" 
+..\src\DisplayOnScreen.c: In function 'printWellcomeMessage':
+..\src\DisplayOnScreen.c:17:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   17 |  printf("¡Bienvenido!\n");
+      |  ^~~~~~
+..\src\DisplayOnScreen.c:17:2: warning: incompatible implicit declaration of built-in function 'printf'
+..\src\DisplayOnScreen.c:1:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+  +++ |+#include <stdio.h>
+    1 | /*
+..\src\DisplayOnScreen.c: In function 'printPrincipalMenu':
+..\src\DisplayOnScreen.c:29:2: warning: incompatible implicit declaration of built-in function 'printf'
+   29 |  printf("OPCIONES:\n");
+      |  ^~~~~~
+..\src\DisplayOnScreen.c:29:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\DisplayOnScreen.o" "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" 
+01:17:31 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DisplayOnScreen.o" "..\\src\\DisplayOnScreen.c" 
+gcc -o TP_[2].exe "src\\DisplayOnScreen.o" "src\\GetData.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+01:51:32 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
