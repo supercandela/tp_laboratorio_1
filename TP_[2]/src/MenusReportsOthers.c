@@ -8,7 +8,12 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include "GetData.h"
+#include "Passengers.h"
+
+#define LEN_TEXT_CHAR 51
+#define LEN_FLIGHT_CODE 10
 
 /**
 * \brief Prints the wellcome message on the screen
@@ -36,7 +41,8 @@ int printPrincipalMenu() {
 	printf("4. Informes\n");
 	printf("5. Listado de Pasajeros\n");
 	printf("6. Listado de vuelos\n");
-	printf("7. Salir\n");
+	printf("7. Carga forzada de Datos\n");
+	printf("8. Salir\n");
 
 	return 0;
 }
@@ -67,4 +73,45 @@ int getOption(int *pNumber, int minimumValue, int maximumValue, int tries) {
 		} while (validation != 0 && tries > 0);
 	}
 	return validation;
+}
+
+/**
+* \brief Prints the sub menu to add a passenger
+* \param void
+* \return Int - 0 : success
+*
+*/
+int printSubMenuAddPax(char name[], char lastName[], int passengerType, char flightCode[], float price) {
+	char paxType[15];
+	printf("1. Nombre Pasajero: 	%s\n", name);
+	printf("2. Apellido Pasajero: 	%s\n", lastName);
+	if (passengerType < 1) {
+		printf("3. Tipo de Pasajero:\n");
+	} else {
+		switch(passengerType) {
+			case FIRST_CLASS:
+				strncpy( paxType, "First Class", 15);
+				break;
+			case BUSINESS:
+				strncpy( paxType, "Business", 15);
+				break;
+			case PREMIUM:
+				strncpy( paxType, "Premium", 15);
+				break;
+			case TURIST:
+				strncpy( paxType, "Turist", 15);
+				break;
+		}
+		printf("3. Tipo de Pasajero: 	%s\n", paxType);
+	}
+	printf("4. Código del vuelo: 	%s\n", flightCode);
+	if (price < 1) {
+		printf("5. Precio del vuelo:\n");
+	} else {
+		printf("5. Precio del vuelo: 	$%.2f\n", price);
+	}
+	printf("6. Guardar datos Pasajero\n");
+	printf("7. Volver al inicio\n");
+
+	return 0;
 }

@@ -13,5 +13,6 @@
 int printWellcomeMessage();
 int printPrincipalMenu();
 int getOption(int *pNumber, int minimumValue, int maximumValue, int tries);
+int printSubMenuAddPax(char name[], char lastName[], int passengerType, char flightCode[], float price);
 
 #endif /* MENUSREPORTSOTHERS_H_ */

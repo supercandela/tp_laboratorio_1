@@ -14,10 +14,12 @@
 int getInt(int *pNumber, int minimumValue, int maximumValue);
 int getFloat(float *pNumber, float minimumValue, float maximumValue);
 int getArrayOfLetters(char pChar[], int len);
+int getArrayOfLettersAndNumbers(char pChar[], int len);
 
 //VALIDATIONS
 int isInt(char pValueToCheck[]);
 int isFloat(char pValueToCheck[]);
 int isArrayOfLetters(char pValueToCheck[]);
+int isArrayOfLettersAndNumbers(char pValueToCheck[]);
 
 #endif /* GETDATA_H_ */

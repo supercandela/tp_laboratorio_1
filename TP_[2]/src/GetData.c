@@ -108,7 +108,7 @@ int isFloat(char pValueToCheck[]) {
 }
 
 /**
-* \brief Asks the end user for a array of chars that includes ONLY LETTERS and SPACES
+* \brief Asks the end user for an array of chars that includes ONLY LETTERS and SPACES
 * \param char[] pointer
 * \param int lenght of the destination array
 * \return Int (0 : success - (-1) : error)
@@ -147,6 +147,48 @@ int isArrayOfLetters(char pValueToCheck[]) {
 		}
 		if ((pValueToCheck[i] != ' ' && pValueToCheck[i] < 'A') || (pValueToCheck[i] > 'Z' && pValueToCheck[i] < 'a')
 				|| pValueToCheck[i] > 'z' || flagSpace > 2) {
+			validation = 0;
+			break;
+		}
+	}
+	return validation;
+}
+
+/**
+* \brief Asks the end user for an array of chars that includes ONLY LETTERS and NUMBERS
+* \param char[] pointer
+* \param int lenght of the destination array
+* \return Int (0 : success - (-1) : error)
+*
+*/
+int getArrayOfLettersAndNumbers(char pChar[], int len) {
+	int validation;
+	char auxChar[51];
+	validation = -1;
+	if (pChar != NULL) {
+		fgets(auxChar, 51, stdin);
+		if(isArrayOfLettersAndNumbers(auxChar)) {
+			strncpy(pChar, auxChar, len);
+			pChar[strlen(pChar)-1] = '\0';
+			validation = 0;
+		}
+	}
+	return validation;
+}
+
+/**
+* \brief Validates a value that includes ONLY LETTERS and NUMBERS
+* \param char[] value to evaluate
+* \return Int (0 : false - 1 : true)
+*
+*/
+int isArrayOfLettersAndNumbers(char pValueToCheck[]) {
+	int validation = 1;
+	int i;
+	int len = strlen(pValueToCheck) - 1;
+	for (i = 0; i < len; i++) {
+		if ( pValueToCheck[i] < '0' || (pValueToCheck[i] > '9' && pValueToCheck[i] < 'A') ||
+				(pValueToCheck[i] > 'Z' && pValueToCheck[i] < 'a') || pValueToCheck[i] > 'z') {
 			validation = 0;
 			break;
 		}

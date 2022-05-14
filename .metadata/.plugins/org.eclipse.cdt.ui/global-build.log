@@ -688,3 +688,576 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
 gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
 Info: Nothing to build for TP_[2]
+10:47:49 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+..\src\Passengers.c: In function 'createPassenger':
+..\src\Passengers.c:138:6: warning: unused variable 'isEmpty' [-Wunused-variable]
+  138 |  int isEmpty;
+      |      ^~~~~~~
+..\src\Passengers.c:137:8: warning: unused variable 'price' [-Wunused-variable]
+  137 |  float price;
+      |        ^~~~~
+..\src\Passengers.c:136:7: warning: unused variable 'flightCode' [-Wunused-variable]
+  136 |  char flightCode[10];
+      |       ^~~~~~~~~~
+..\src\Passengers.c:135:6: warning: unused variable 'passengerType' [-Wunused-variable]
+  135 |  int passengerType;
+      |      ^~~~~~~~~~~~~
+..\src\Passengers.c:134:7: warning: unused variable 'lastName' [-Wunused-variable]
+  134 |  char lastName[51];
+      |       ^~~~~~~~
+..\src\Passengers.c:133:7: warning: unused variable 'name' [-Wunused-variable]
+  133 |  char name[51];
+      |       ^~~~
+..\src\Passengers.c:127:6: warning: variable 'id' set but not used [-Wunused-but-set-variable]
+  127 |  int id;
+      |      ^~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+..\src\MenusReportsOthers.c: In function 'manageSubMenuAddPax':
+..\src\MenusReportsOthers.c:99:6: warning: unused variable 'validation' [-Wunused-variable]
+   99 |  int validation;
+      |      ^~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+10:48:22 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+11:01:13 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+..\src\MenusReportsOthers.c: In function 'manageSubMenuAddPax':
+..\src\MenusReportsOthers.c:101:6: warning: unused variable 'validation' [-Wunused-variable]
+  101 |  int validation;
+      |      ^~~~~~~~~~
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+11:02:32 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+11:04:08 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+11:10:44 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+11:27:12 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+..\src\MenusReportsOthers.c: In function 'printSubMenuAddPax':
+..\src\MenusReportsOthers.c:83:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   83 |  if (name == "NULL") {
+      |           ^~
+..\src\MenusReportsOthers.c:88:15: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   88 |  if (lastName == "NULL") {
+      |               ^~
+..\src\MenusReportsOthers.c:96:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   96 |   printf("3. Tipo de Pasajero:  %s\n", passengerType);
+      |                                 ~^     ~~~~~~~~~~~~~
+      |                                  |     |
+      |                                  |     int
+      |                                  char *
+      |                                 %d
+..\src\MenusReportsOthers.c:98:17: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   98 |  if (flightCode == "NULL") {
+      |                 ^~
+..\src\MenusReportsOthers.c:106:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'double' [-Wformat=]
+  106 |   printf("5. Precio del vuelo:  %s\n", price);
+      |                                 ~^     ~~~~~
+      |                                  |     |
+      |                                  |     double
+      |                                  char *
+      |                                 %f
+..\src\MenusReportsOthers.c: In function 'manageSubMenuAddPax':
+..\src\MenusReportsOthers.c:126:14: error: assignment to expression with array type
+  126 |  auxPax.name = "NULL";
+      |              ^
+..\src\MenusReportsOthers.c:127:18: error: assignment to expression with array type
+  127 |  auxPax.lastName = "NULL";
+      |                  ^
+..\src\MenusReportsOthers.c:129:20: error: assignment to expression with array type
+  129 |  auxPax.flightCode = "NULL";
+      |                    ^
+11:29:17 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+..\src\MenusReportsOthers.c: In function 'printSubMenuAddPax':
+..\src\MenusReportsOthers.c:83:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   83 |  if (name == "NULL") {
+      |           ^~
+..\src\MenusReportsOthers.c:88:15: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   88 |  if (lastName == "NULL") {
+      |               ^~
+..\src\MenusReportsOthers.c:96:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   96 |   printf("3. Tipo de Pasajero:  %s\n", passengerType);
+      |                                 ~^     ~~~~~~~~~~~~~
+      |                                  |     |
+      |                                  |     int
+      |                                  char *
+      |                                 %d
+..\src\MenusReportsOthers.c:98:17: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   98 |  if (flightCode == "NULL") {
+      |                 ^~
+..\src\MenusReportsOthers.c:106:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'double' [-Wformat=]
+  106 |   printf("5. Precio del vuelo:  %s\n", price);
+      |                                 ~^     ~~~~~
+      |                                  |     |
+      |                                  |     double
+      |                                  char *
+      |                                 %f
+..\src\MenusReportsOthers.c: In function 'manageSubMenuAddPax':
+..\src\MenusReportsOthers.c:126:2: warning: implicit declaration of function 'strncpy' [-Wimplicit-function-declaration]
+  126 |  strncpy(auxPax.name, "NULL", LEN_TEXT_CHAR);
+      |  ^~~~~~~
+..\src\MenusReportsOthers.c:126:2: warning: incompatible implicit declaration of built-in function 'strncpy'
+..\src\MenusReportsOthers.c:13:1: note: include '<string.h>' or provide a declaration of 'strncpy'
+   12 | #include "Passengers.h"
+  +++ |+#include <string.h>
+   13 | 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+11:29:55 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+..\src\MenusReportsOthers.c: In function 'printSubMenuAddPax':
+..\src\MenusReportsOthers.c:83:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   83 |  if (name == "NULL") {
+      |           ^~
+..\src\MenusReportsOthers.c:88:15: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   88 |  if (lastName == "NULL") {
+      |               ^~
+..\src\MenusReportsOthers.c:98:17: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   98 |  if (flightCode == "NULL") {
+      |                 ^~
+..\src\MenusReportsOthers.c: In function 'manageSubMenuAddPax':
+..\src\MenusReportsOthers.c:126:2: warning: implicit declaration of function 'strncpy' [-Wimplicit-function-declaration]
+  126 |  strncpy(auxPax.name, "NULL", LEN_TEXT_CHAR);
+      |  ^~~~~~~
+..\src\MenusReportsOthers.c:126:2: warning: incompatible implicit declaration of built-in function 'strncpy'
+..\src\MenusReportsOthers.c:13:1: note: include '<string.h>' or provide a declaration of 'strncpy'
+   12 | #include "Passengers.h"
+  +++ |+#include <string.h>
+   13 | 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+11:48:19 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+12:05:12 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+..\src\MenusReportsOthers.c: In function 'manageSubMenuAddPax':
+..\src\MenusReportsOthers.c:138:35: warning: passing argument 1 of 'getPassengersType' makes pointer from integer without a cast [-Wint-conversion]
+  138 |      if (getPassengersType( auxPax.passengerType, 3)) {
+      |                             ~~~~~~^~~~~~~~~~~~~~
+      |                                   |
+      |                                   int
+In file included from ..\src\MenusReportsOthers.c:13:
+..\src\Passengers.h:37:28: note: expected 'int *' but argument is of type 'int'
+   37 | int getPassengersType(int *pPaxType, int tries);
+      |                       ~~~~~^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:06:15 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:06:35 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+12:13:03 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+12:31:12 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+12:43:42 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+..\src\MenusReportsOthers.c: In function 'manageSubMenuAddPax':
+..\src\MenusReportsOthers.c:163:36: error: incompatible type for argument 1 of 'getPassengersPrice'
+  163 |      if (getPassengersPrice( auxPax.price, 0, 5000000,3)) {
+      |                              ~~~~~~^~~~~~
+      |                                    |
+      |                                    float
+In file included from ..\src\MenusReportsOthers.c:13:
+..\src\Passengers.h:39:31: note: expected 'float *' but argument is of type 'float'
+   39 | int getPassengersPrice(float *pPrice, float minimumValue, float maximumValue, int tries);
+      |                        ~~~~~~~^~~~~~
+12:44:02 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+12:45:00 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+12:52:25 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:31:6: warning: variable 'exitValueAddPax' set but not used [-Wunused-but-set-variable]
+   31 |  int exitValueAddPax;
+      |      ^~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+12:54:59 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:31:6: warning: variable 'exitValueAddPax' set but not used [-Wunused-but-set-variable]
+   31 |  int exitValueAddPax;
+      |      ^~~~~~~~~~~~~~~
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+12:59:12 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:31:6: warning: unused variable 'exitValueAddPax' [-Wunused-variable]
+   31 |  int exitValueAddPax;
+      |      ^~~~~~~~~~~~~~~
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+12:59:30 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+13:03:21 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+13:06:17 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+13:15:14 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+13:37:14 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+13:44:20 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+13:49:07 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:46:6: error: a label can only be part of a statement and a declaration is not a statement
+   46 |      int submenuOption;
+      |      ^~~
+..\src\TP_[2].c:47:6: error: expected expression before 'int'
+   47 |      int exitValueGetOptionSubMenu;
+      |      ^~~
+..\src\TP_[2].c:50:6: warning: implicit declaration of function 'strncpy' [-Wimplicit-function-declaration]
+   50 |      strncpy( auxPax.name, "    ", LEN_TEXT_CHAR);
+      |      ^~~~~~~
+..\src\TP_[2].c:50:6: warning: incompatible implicit declaration of built-in function 'strncpy'
+..\src\TP_[2].c:15:1: note: include '<string.h>' or provide a declaration of 'strncpy'
+   14 | #include "Passengers.h"
+  +++ |+#include <string.h>
+   15 | 
+..\src\TP_[2].c:58:7: error: 'exitValueGetOptionSubMenu' undeclared (first use in this function); did you mean 'exitValueGetOption'?
+   58 |       exitValueGetOptionSubMenu = getOption(&submenuOption, 1, 7, 3);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |       exitValueGetOption
+..\src\TP_[2].c:58:7: note: each undeclared identifier is reported only once for each function it appears in
+13:50:42 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:49:6: error: a label can only be part of a statement and a declaration is not a statement
+   49 |      Passengers auxPax;
+      |      ^~~~~~~~~~
+13:51:09 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+14:27:18 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:87:54: warning: passing argument 3 of 'addPassenger' makes integer from pointer without a cast [-Wint-conversion]
+   87 |          if (addPassenger( passenger, LEN_PAX, auxPax.name, LEN_TEXT_CHAR, auxPax.lastName, LEN_TEXT_CHAR,
+      |                                                ~~~~~~^~~~~
+      |                                                      |
+      |                                                      char *
+In file included from ..\src\TP_[2].c:15:
+..\src\Passengers.h:32:66: note: expected 'int' but argument is of type 'char *'
+   32 | int addPassenger(Passengers pPassenger[], int len_passenger, int id, char pName[], int len_name, char pLastName[], int len_last_name,
+      |                                                              ~~~~^~
+..\src\TP_[2].c:18:23: warning: passing argument 4 of 'addPassenger' makes pointer from integer without a cast [-Wint-conversion]
+   18 | #define LEN_TEXT_CHAR 51
+      |                       ^~
+      |                       |
+      |                       int
+..\src\TP_[2].c:87:61: note: in expansion of macro 'LEN_TEXT_CHAR'
+   87 |          if (addPassenger( passenger, LEN_PAX, auxPax.name, LEN_TEXT_CHAR, auxPax.lastName, LEN_TEXT_CHAR,
+      |                                                             ^~~~~~~~~~~~~
+In file included from ..\src\TP_[2].c:15:
+..\src\Passengers.h:32:75: note: expected 'char *' but argument is of type 'int'
+   32 | int addPassenger(Passengers pPassenger[], int len_passenger, int id, char pName[], int len_name, char pLastName[], int len_last_name,
+      |                                                                      ~~~~~^~~~~~~
+..\src\TP_[2].c:87:82: warning: passing argument 5 of 'addPassenger' makes integer from pointer without a cast [-Wint-conversion]
+   87 |          if (addPassenger( passenger, LEN_PAX, auxPax.name, LEN_TEXT_CHAR, auxPax.lastName, LEN_TEXT_CHAR,
+      |                                                                            ~~~~~~^~~~~~~~~
+      |                                                                                  |
+      |                                                                                  char *
+In file included from ..\src\TP_[2].c:15:
+..\src\Passengers.h:32:88: note: expected 'int' but argument is of type 'char *'
+   32 | int addPassenger(Passengers pPassenger[], int len_passenger, int id, char pName[], int len_name, char pLastName[], int len_last_name,
+      |                                                                                    ~~~~^~~~~~~~
+..\src\TP_[2].c:18:23: warning: passing argument 6 of 'addPassenger' makes pointer from integer without a cast [-Wint-conversion]
+   18 | #define LEN_TEXT_CHAR 51
+      |                       ^~
+      |                       |
+      |                       int
+..\src\TP_[2].c:87:93: note: in expansion of macro 'LEN_TEXT_CHAR'
+   87 |          if (addPassenger( passenger, LEN_PAX, auxPax.name, LEN_TEXT_CHAR, auxPax.lastName, LEN_TEXT_CHAR,
+      |                                                                                             ^~~~~~~~~~~~~
+In file included from ..\src\TP_[2].c:15:
+..\src\Passengers.h:32:103: note: expected 'char *' but argument is of type 'int'
+   32 | int addPassenger(Passengers pPassenger[], int len_passenger, int id, char pName[], int len_name, char pLastName[], int len_last_name,
+      |                                                                                                  ~~~~~^~~~~~~~~~~
+..\src\TP_[2].c:88:40: warning: passing argument 8 of 'addPassenger' makes integer from pointer without a cast [-Wint-conversion]
+   88 |            auxPax.passengerType, auxPax.flightCode, LEN_FLIGHT_CODE, auxPax.price)) {
+      |                                  ~~~~~~^~~~~~~~~~~
+      |                                        |
+      |                                        char *
+In file included from ..\src\TP_[2].c:15:
+..\src\Passengers.h:33:7: note: expected 'int' but argument is of type 'char *'
+   33 |   int passengerType, char flightCode[], float price);
+      |   ~~~~^~~~~~~~~~~~~
+..\src\TP_[2].c:19:25: warning: passing argument 9 of 'addPassenger' makes pointer from integer without a cast [-Wint-conversion]
+   19 | #define LEN_FLIGHT_CODE 10
+      |                         ^~
+      |                         |
+      |                         int
+..\src\TP_[2].c:88:53: note: in expansion of macro 'LEN_FLIGHT_CODE'
+   88 |            auxPax.passengerType, auxPax.flightCode, LEN_FLIGHT_CODE, auxPax.price)) {
+      |                                                     ^~~~~~~~~~~~~~~
+In file included from ..\src\TP_[2].c:15:
+..\src\Passengers.h:33:27: note: expected 'char *' but argument is of type 'int'
+   33 |   int passengerType, char flightCode[], float price);
+      |                      ~~~~~^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+..\src\Passengers.c:48:5: error: conflicting types for 'addPassenger'
+   48 | int addPassenger(Passengers pPassenger[], int len_passenger, char pName[], int len_name, char pLastName[], int len_last_name,
+      |     ^~~~~~~~~~~~
+In file included from ..\src\Passengers.c:11:
+..\src\Passengers.h:32:5: note: previous declaration of 'addPassenger' was here
+   32 | int addPassenger(Passengers pPassenger[], int len_passenger, int id, char pName[], int len_name, char pLastName[], int len_last_name,
+      |     ^~~~~~~~~~~~
+..\src\Passengers.c: In function 'addPassenger':
+..\src\Passengers.c:53:15: warning: implicit declaration of function 'getFirstEmptyPax' [-Wimplicit-function-declaration]
+   53 |   freeIndex = getFirstEmptyPax(pPassenger, len_passenger);
+      |               ^~~~~~~~~~~~~~~~
+..\src\Passengers.c:56:4: warning: implicit declaration of function 'strncpy' [-Wimplicit-function-declaration]
+   56 |    strncpy(pPassenger[freeIndex].name, pName, len_name);
+      |    ^~~~~~~
+..\src\Passengers.c:56:4: warning: incompatible implicit declaration of built-in function 'strncpy'
+..\src\Passengers.c:13:1: note: include '<string.h>' or provide a declaration of 'strncpy'
+   12 | #include "GetData.h"
+  +++ |+#include <string.h>
+   13 | 
+14:28:28 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+..\src\Passengers.c: In function 'addPassenger':
+..\src\Passengers.c:56:4: warning: implicit declaration of function 'strncpy' [-Wimplicit-function-declaration]
+   56 |    strncpy(pPassenger[freeIndex].name, pName, len_name);
+      |    ^~~~~~~
+..\src\Passengers.c:56:4: warning: incompatible implicit declaration of built-in function 'strncpy'
+..\src\Passengers.c:13:1: note: include '<string.h>' or provide a declaration of 'strncpy'
+   12 | #include "GetData.h"
+  +++ |+#include <string.h>
+   13 | 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:29:18 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:29:23 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:29:28 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:29:37 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+15:16:03 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+15:19:37 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:19:41 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+15:32:14 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:32:24 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:32:44 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:32:54 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+15:46:02 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+15:52:03 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+16:00:21 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+..\src\Passengers.c: In function 'showPax':
+..\src\Passengers.c:275:36: warning: format '%d' expects argument of type 'int', but argument 2 has type 'char *' [-Wformat=]
+  275 |      printf("PAX nombre en lista: %d\n", pax.name);
+      |                                   ~^     ~~~~~~~~
+      |                                    |        |
+      |                                    int      char *
+      |                                   %s
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+16:00:40 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+16:12:16 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:57:98: error: invalid type argument of unary '*' (have 'float')
+   57 |       printSubMenuAddPax( auxPax.name, auxPax.lastName, auxPax.passengerType, auxPax.flightCode, *auxPax.price);
+      |                                                                                                  ^~~~~~~~~~~~~
+16:12:57 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+16:15:38 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+16:23:39 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+16:27:15 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+16:31:07 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+17:00:11 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+17:02:11 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+17:04:11 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
