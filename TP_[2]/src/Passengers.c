@@ -302,7 +302,7 @@ void printPaxListHeader(void) {
 * \return Int - 0 : success - (-1) : error
 *
 */
-int printPassengersList(Passengers pPax[], int len) {
+int printPassengers(Passengers pPax[], int len) {
 	int validation;
 	validation = -1;
 	if (pPax != NULL && len > 0) {
@@ -417,7 +417,8 @@ int modifyPassenger(Passengers pPassenger[], int len_passenger, int id) {
 						break;
 				}
 			} while (exitValue == 0 && optionSubMenu != 6);
-
+		} else {
+			printf("Pasajero no encontrado.\n");
 		}
 	}
 	return validation;
@@ -447,6 +448,35 @@ int getPaxId(int *pPaxId, int minimumValue, int maximumValue, int tries) {
 						"Usted tiene %d intentos.\n", minimumValue, maximumValue, tries);
 			}
 		} while (validation != 0 && tries > 0);
+	}
+	return validation;
+}
+
+/**
+* \brief Removes a passenger by Id (put isEmpty Flag in 1)
+* \param Passengers Array pointer to array of Passengers
+* \param int array length
+* \param int id to remove
+* \return Int - 0 : success - (-1) : error [Invalid length or NULL pointer or passenger not found]
+*/
+int removePassenger(Passengers pPassenger[], int len_passenger, int id) {
+	int validation = -1;
+	int index;
+	if (pPassenger != NULL && len_passenger > 0 && id > 0) {
+		index = findPassengerById(pPassenger, len_passenger, id);
+		if(index != -1){
+			printPaxListHeader();
+			showPax(pPassenger[index]);
+			printf("\n\n");
+			printf("¿Seguro quiere borrar este pasajero?");
+			if (doYouConfirm()) {
+				pPassenger[index].isEmpty = 1;
+				printf("Pasajero eliminado.\n");
+			}
+			validation = 0;
+		} else {
+			printf("Pasajero no encontrado.\n");
+		}
 	}
 	return validation;
 }

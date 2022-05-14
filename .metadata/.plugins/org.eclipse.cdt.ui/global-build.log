@@ -1319,3 +1319,48 @@ collect2.exe: error: ld returned 1 exit status
 Info: Internal Builder is used for build
 gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
 Info: Nothing to build for TP_[2]
+19:24:55 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'doYouConfirm':
+..\src\GetData.c:210:8: warning: passing argument 1 of 'fgets' makes pointer from integer without a cast [-Wint-conversion]
+  210 |  fgets(auxChar, 1, stdin);
+      |        ^~~~~~~
+      |        |
+      |        char
+In file included from ..\src\GetData.c:10:
+c:\mingw\include\stdio.h:706:41: note: expected 'char *' but argument is of type 'char'
+  706 | _CRTIMP __cdecl __MINGW_NOTHROW  char * fgets (char *, int, FILE *);
+      |                                         ^~~~~
+..\src\GetData.c:210:2: warning: 'auxChar' is used uninitialized in this function [-Wuninitialized]
+  210 |  fgets(auxChar, 1, stdin);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+19:28:23 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+..\src\GetData.c: In function 'doYouConfirm':
+..\src\GetData.c:211:10: warning: format '%c' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  211 |  scanf("%c", auxChar);
+      |         ~^   ~~~~~~~
+      |          |   |
+      |          |   int
+      |          char *
+..\src\GetData.c:211:2: warning: 'auxChar' is used uninitialized in this function [-Wuninitialized]
+  211 |  scanf("%c", auxChar);
+      |  ^~~~~~~~~~~~~~~~~~~~
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+19:28:48 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+Info: Nothing to build for TP_[2]
+19:35:30 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]

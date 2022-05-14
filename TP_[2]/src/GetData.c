@@ -195,3 +195,22 @@ int isArrayOfLettersAndNumbers(char pValueToCheck[]) {
 	}
 	return validation;
 }
+
+/**
+* \brief Asks the end user for confirmation in an action
+* \param void
+* \return Int (0 : false - 1 : true)
+*
+*/
+int doYouConfirm(void) {
+	int validation;
+	validation = 0;
+	char auxChar;
+	printf("¿Confirmar acción? ( S - N )");
+	fflush( stdin );
+	scanf("%c", &auxChar);
+	if ( auxChar == 's' || auxChar == 'S') {
+		validation = 1;
+	}
+	return validation;
+}

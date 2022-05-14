@@ -41,10 +41,11 @@ int getPassengersFlightCode(char pFlightCode[], int len_char, int tries);
 int getPassengersPrice(float *pPrice, float minimumValue, float maximumValue, int tries);
 int getFirstEmptyPax(Passengers pPax[], int len);
 void showPax(Passengers pax);
-int printPassengersList(Passengers pPax[], int len);
+int printPassengers(Passengers pPax[], int len);
 int forcedLoadPassengersListWithPrechargeValues(Passengers pPassenger[], int len_passenger);
 int findPassengerById(Passengers pPassenger[], int len_passenger, int id);
 int modifyPassenger(Passengers pPassenger[], int len_passenger, int id);
 int getPaxId(int *pPaxId, int minimumValue, int maximumValue, int tries);
+int removePassenger(Passengers pPassenger[], int len_passenger, int id);
 
 #endif /* PASSENGERS_H_ */

@@ -117,13 +117,18 @@ int main(void) {
 					}
 					break;
 				case 3:
-					printf("3. Baja Pasajero\n");
+					exitValueGetOptionSubMenu = getPaxId(&pax_id, 1000, 3001, 3);
+					if (exitValueGetOptionSubMenu == 0) {
+						removePassenger(passenger, LEN_PAX, pax_id);
+					} else {
+						printf("\nLa opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos.\n");
+					}
 					break;
 				case 4:
 					printf("4. Informes\n");
 					break;
 				case 5:
-					printPassengersList(passenger, LEN_PAX);
+					printPassengers(passenger, LEN_PAX);
 					break;
 				case 6:
 					printf("6. Listado de vuelos\n");
