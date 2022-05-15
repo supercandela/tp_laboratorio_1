@@ -603,10 +603,17 @@ int sortsPaxByFlightCodeAndPrints(Passengers pPassenger[], int len_passenger, Fl
 		sortPassengersByFlightCode(pPassenger, len_passenger);
 		printPaxListHeader();
 		for (int i = 0; i < len_passenger; i++) {
-			if(pPassenger[i].isEmpty) {
+			if(pPassenger[i].isEmpty == 0){
+				printf("pax %s\n", pPassenger[i].flightCode);
 				for (int j = 0; j < len_flight; j++) {
-					if (pPassenger[i].flightCode == pFlight[j].flightCode && pFlight[j].statusFlight == 1)
-					showPax(pPassenger[i]);
+					if(pFlight[i].isEmpty == 0){
+						printf("flight %s\n", pFlight[j].flightCode);
+						if(pFlight[j].statusFlight == 1){
+							if (pPassenger[i].flightCode == pFlight[j].flightCode){
+								showPax(pPassenger[i]);
+							}
+						}
+					}
 				}
 			}
 		}
