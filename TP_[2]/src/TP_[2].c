@@ -128,7 +128,26 @@ int main(void) {
 					}
 					break;
 				case 4:
-					printf("4. Informes\n");
+					do {
+						printSubMenuReports();
+						exitValueGetOptionSubMenu = getOption(&submenuOption, 1, 4, 3);
+						switch(submenuOption) {
+							case 1:
+								sortsPaxByLastNameAndPrints(passenger, LEN_PAX, 1);
+								break;
+							case 2:
+								totalPrice(passenger, LEN_PAX);
+								break;
+							case 3:
+								sortsPaxByFlightCodeAndPrints(passenger, LEN_PAX, flight, LEN_FLIGHT);
+								break;
+							case 4:
+								break;
+						}
+					} while (exitValueGetOptionSubMenu == 0 && submenuOption != 4);
+					if (exitValueGetOptionSubMenu < 1) {
+						printf("\nLa opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos.\n");
+					}
 					break;
 				case 5:
 					printPassengers(passenger, LEN_PAX);

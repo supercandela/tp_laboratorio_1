@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "Passengers.h"
+#include "Flights.h"
 #include "GetData.h"
 #include "MenusReportsOthers.h"
 
@@ -465,4 +466,154 @@ int removePassenger(Passengers pPassenger[], int len_passenger, int id) {
 		}
 	}
 	return validation;
+}
+
+/**
+* \brief Sorts the elements in the array of passengers, the argument order indicate UP or DOWN order
+* \param Passengers Array pointer to array of Passengers
+* \param int array length
+* \param int order
+* \return Int - 0 : success - (-1) : error [Invalid length or NULL pointer]
+*/
+int sortPassengers(Passengers pPassenger[], int len_passenger, int order) {
+	int validation;
+	validation = -1;
+	int i;
+	int isOK;
+	Passengers auxPax;
+	if (pPassenger != NULL && len_passenger > 0 && order != 0) {
+		do {
+			isOK = 1;
+			len_passenger--;
+			for (i = 0; i < len_passenger; i++) {
+				if (strcmp(pPassenger[i].lastName, pPassenger[i + 1].lastName) < order) {
+					auxPax = pPassenger[i];
+					pPassenger[i] = pPassenger[i + 1];
+					pPassenger[i + 1] = auxPax;
+					isOK = 0;
+				} else if (strcmp(pPassenger[i].lastName, pPassenger[i + 1].lastName) == 0
+						&& pPassenger[i].passengerType < pPassenger[i + 1].passengerType) {
+					auxPax = pPassenger[i];
+					pPassenger[i] = pPassenger[i + 1];
+					pPassenger[i + 1] = auxPax;
+					isOK = 0;
+				}
+			}
+		} while (isOK == 0);
+		validation = 0;
+	}
+	return validation;
+}
+
+/**
+* \brief Sorts the elements in the array of passengers by flight code
+* \param Passengers Array pointer to array of Passengers
+* \param int array length
+* \return Int - 0 : success - (-1) : error [Invalid length or NULL pointer]
+*/
+int sortPassengersByFlightCode(Passengers pPassenger[], int len_passenger) {
+	int validation;
+	validation = -1;
+	int i;
+	int isOK;
+	Passengers auxPax;
+	if (pPassenger != NULL && len_passenger > 0) {
+		do {
+			isOK = 1;
+			len_passenger--;
+			for (i = 0; i < len_passenger; i++) {
+				if (strcmp(pPassenger[i].flightCode, pPassenger[i + 1].flightCode) > 0) {
+					auxPax = pPassenger[i];
+					pPassenger[i] = pPassenger[i + 1];
+					pPassenger[i + 1] = auxPax;
+					isOK = 0;
+				}
+			}
+		} while (isOK == 0);
+		validation = 0;
+	}
+	return validation;
+}
+
+/**
+* \brief Sorts the passengers by last name and passenger´s type and prints the result
+* \param Passengers Array pointer to array of Passengers
+* \param int array length
+* \param int order
+* \return Int - 0 : success
+*
+*/
+int sortsPaxByLastNameAndPrints(Passengers pPassenger[], int len_passenger, int order) {
+	sortPassengers(pPassenger, len_passenger, 1);
+	printPassengers(pPassenger, len_passenger);
+	return 0;
+}
+
+/**
+* \brief Total y promedio de los pasajes y pax que superan el precio promedio
+* \param Passengers Array pointer to array of Passengers
+* \param int array length
+* \param int order
+* \return Int - 0 : success
+*
+*/
+int totalPrice(Passengers pPassenger[], int len_passenger) {
+	float total;
+	int count;
+	float promedio;
+	int paxOverMedia;
+	total = 0;
+	count = 0;
+	paxOverMedia = 0;
+	int i;
+	if (pPassenger != NULL && len_passenger > 0) {
+		for(i = 0; i < len_passenger; i++) {
+			if (pPassenger[i].isEmpty == 0){
+				total += pPassenger[i].price;
+				count++;
+			}
+		}
+		promedio = total / count;
+		for(i = 0; i < len_passenger; i++) {
+			if (pPassenger[i].isEmpty == 0 && pPassenger[i].price > promedio){
+				paxOverMedia++;
+			}
+		}
+	}
+
+	printf("Suma total precios pasajes: $%.2f.\n", total);
+	printf("Promedio precios pasajes: $%.2f.\n", promedio);
+	printf("Pasajeros que superan el promedio: %d.\n", paxOverMedia);
+	printf("\n======================================================================================================="
+			"=============\n");
+
+	return 0;
+}
+
+/**
+* \brief Sorts the passengers by flight code and status ACTIVO and prints the result
+* \param Passengers Array pointer to array of Passengers
+* \param int array length
+* \param int order
+* \return Int - 0 : success
+*
+*/
+int sortsPaxByFlightCodeAndPrints(Passengers pPassenger[], int len_passenger, Flights pFlight[], int len_flight) {
+	if (pPassenger != NULL && len_passenger > 0) {
+		sortPassengersByFlightCode(pPassenger, len_passenger);
+		printPaxListHeader();
+		for (int i = 0; i < len_passenger; i++) {
+			if(pPassenger[i].isEmpty) {
+				for (int j = 0; j < len_flight; j++) {
+					if (pPassenger[i].flightCode == pFlight[j].flightCode && pFlight[j].statusFlight == 1)
+					showPax(pPassenger[i]);
+				}
+			}
+		}
+
+		printf("+--------+------------------------------+------------------------------+--------------------+------------+---------------+\n");
+		printf("\n==========================================================================================================================\n");
+		printf("\n\n");
+	}
+	return 0;
 }

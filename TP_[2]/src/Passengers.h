@@ -18,6 +18,7 @@
 #define LEN_TEXT_CHAR 51
 #define LEN_FLIGHT_CODE 10
 
+#include "Flights.h"
 //STRUCTURES
 typedef struct {
 	int id;
@@ -46,5 +47,10 @@ int findPassengerById(Passengers pPassenger[], int len_passenger, int id);
 int modifyPassenger(Passengers pPassenger[], int len_passenger, int id);
 int getPaxId(int *pPaxId, int minimumValue, int maximumValue, int tries);
 int removePassenger(Passengers pPassenger[], int len_passenger, int id);
+int sortPassengers(Passengers pPassenger[], int len_passenger, int order);
+int sortsPaxByLastNameAndPrints(Passengers pPassenger[], int len_passenger, int order);
+int totalPrice(Passengers pPassenger[], int len_passenger);
+int sortPassengersByFlightCode(Passengers pPassenger[], int len_passenger);
+int sortsPaxByFlightCodeAndPrints(Passengers pPassenger[], int len_passenger, Flights pFlight[], int len_flight);
 
 #endif /* PASSENGERS_H_ */

@@ -1574,3 +1574,139 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c"
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
 gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
 Info: Nothing to build for TP_[2]
+22:43:17 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:136:9: warning: implicit declaration of function 'sortsPaxByLastNameAndPrints' [-Wimplicit-function-declaration]
+  136 |         sortsPaxByLastNameAndPrints(passenger, LEN_PAX);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+22:43:46 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+In file included from ..\src\TP_[2].c:14:
+..\src\MenusReportsOthers.h:19:33: error: unknown type name 'Passengers'
+   19 | int sortsPaxByLastNameAndPrints(Passengers pPassenger[], int len_passenger, int order);
+      |                                 ^~~~~~~~~~
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:136:9: warning: implicit declaration of function 'sortsPaxByLastNameAndPrints' [-Wimplicit-function-declaration]
+  136 |         sortsPaxByLastNameAndPrints(passenger, LEN_PAX);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+22:44:52 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+In file included from ..\src\TP_[2].c:14:
+..\src\MenusReportsOthers.h:19:33: error: unknown type name 'Passengers'
+   19 | int sortsPaxByLastNameAndPrints(Passengers pPassenger[], int len_passenger, int order);
+      |                                 ^~~~~~~~~~
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:136:9: warning: implicit declaration of function 'sortsPaxByLastNameAndPrints' [-Wimplicit-function-declaration]
+  136 |         sortsPaxByLastNameAndPrints(passenger, LEN_PAX);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+22:45:16 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+In file included from ..\src\TP_[2].c:14:
+..\src\MenusReportsOthers.h:19:33: error: unknown type name 'Passengers'
+   19 | int sortsPaxByLastNameAndPrints(Passengers pPassenger[], int len_passenger, int order);
+      |                                 ^~~~~~~~~~
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:136:9: warning: implicit declaration of function 'sortsPaxByLastNameAndPrints' [-Wimplicit-function-declaration]
+  136 |         sortsPaxByLastNameAndPrints(passenger, LEN_PAX);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+22:45:28 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:136:9: warning: implicit declaration of function 'sortsPaxByLastNameAndPrints' [-Wimplicit-function-declaration]
+  136 |         sortsPaxByLastNameAndPrints(passenger, LEN_PAX);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+22:46:01 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+In file included from ..\src\TP_[2].c:14:
+..\src\MenusReportsOthers.h:19:33: error: unknown type name 'Passengers'
+   19 | int sortsPaxByLastNameAndPrints(Passengers pPassenger[], int len_passenger, int order);
+      |                                 ^~~~~~~~~~
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:136:9: warning: implicit declaration of function 'sortsPaxByLastNameAndPrints' [-Wimplicit-function-declaration]
+  136 |         sortsPaxByLastNameAndPrints(passenger, LEN_PAX);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+22:48:32 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:136:9: error: too few arguments to function 'sortsPaxByLastNameAndPrints'
+  136 |         sortsPaxByLastNameAndPrints(passenger, LEN_PAX);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\TP_[2].c:15:
+..\src\Passengers.h:50:5: note: declared here
+   50 | int sortsPaxByLastNameAndPrints(Passengers pPassenger[], int len_passenger, int order);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+22:49:04 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+23:03:39 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+..\src\Passengers.c: In function 'totalPrice':
+..\src\Passengers.c:555:9: warning: too many arguments for format [-Wformat-extra-args]
+  555 |  printf("Pasajeros que superan el promedio: $d.", paxOverMedia);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:03:51 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+23:04:49 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+23:06:19 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[2].exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:06:29 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+23:21:09 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+In file included from ..\src\Flights.c:12:
+..\src\Passengers.h:53:79: error: unknown type name 'Flights'
+   53 | int sortsPaxByFlightCodeAndPrints(Passengers pPassenger[], int len_passenger, Flights pFlight[], int len_flight);
+      |                                                                               ^~~~~~~
+23:23:05 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]

@@ -77,7 +77,11 @@ int getOption(int *pNumber, int minimumValue, int maximumValue, int tries) {
 
 /**
 * \brief Prints the sub menu to add a passenger
-* \param void
+* \param char array	passenger´s name
+* \param char array	passenger´s lastname
+* \param int passenger´s type
+* \param char array flycode
+* \param float flight´s price
 * \return Int - 0 : success
 *
 */
@@ -118,7 +122,11 @@ int printSubMenuAddPax(char name[], char lastName[], int passengerType, char fli
 
 /**
 * \brief Prints the sub menu to modify a passenger
-* \param void
+* \param char array	passenger´s name
+* \param char array	passenger´s lastname
+* \param int passenger´s type
+* \param char array flycode
+* \param float flight´s price
 * \return Int - 0 : success
 *
 */
@@ -155,3 +163,19 @@ int printSubMenuModifyPax(char name[], char lastName[], int passengerType, char 
 
 	return 0;
 }
+
+/**
+* \brief Prints the sub menu to reports
+* \param void
+* \return Int - 0 : success
+*
+*/
+int printSubMenuReports() {
+	printf("1. Listado de los pasajeros ordenados alfabéticamente por Apellido y Tipo de pasajero.\n");
+	printf("2. Total y promedio de los precios de los pasajes, y cuántos pasajeros superan el precio promedio.\n");
+	printf("3. Listado de los pasajeros por Código de vuelo y estados de vuelos ‘ACTIVO’. \n");
+	printf("3. Volver atrás. \n");
+	return 0;
+}
+
+
