@@ -13,8 +13,10 @@
 #include <string.h>
 #include "MenusReportsOthers.h"
 #include "Passengers.h"
+#include "Flights.h"
 
 #define LEN_PAX 15
+#define LEN_FLIGHT 15
 #define LEN_TEXT_CHAR 51
 #define LEN_FLIGHT_CODE 10
 
@@ -29,6 +31,7 @@ int main(void) {
 
 	Passengers passenger[LEN_PAX];
 	Passengers auxPax;
+	Flights flight[LEN_FLIGHT];
 	int menuOption;
 	int exitValueGetOption;
 	int submenuOption;
@@ -36,7 +39,7 @@ int main(void) {
 	int pax_id;
 
 	initPassengers(passenger, LEN_PAX);
-//	INICIALIZAR ESTRUCTURA VUELOS
+	initFlights(flight, LEN_FLIGHT);
 
 	printWellcomeMessage();
 
@@ -131,19 +134,32 @@ int main(void) {
 					printPassengers(passenger, LEN_PAX);
 					break;
 				case 6:
-					printf("6. Listado de vuelos\n");
+					printFlights(flight, LEN_FLIGHT);
 					break;
 				case 7:
 					if (!forcedLoadPassengersListWithPrechargeValues(passenger, LEN_PAX)){
 						printf("\n========================================================================================"
 								"============================\n"
-								"Carga de datos exitosa."
+								"Carga de pasajeros exitosa."
 								"\n======================================================================================="
 								"=============================\n");
 					} else {
 						printf("\n========================================================================================"
 								"============================\n"
-								"Carga de datos fallida."
+								"Carga de pasajeros fallida."
+								"\n======================================================================================="
+								"=============================\n");
+					}
+					if (!forcedLoadFlightsListWithPrechargeValues(flight, LEN_FLIGHT)){
+						printf("\n========================================================================================"
+								"============================\n"
+								"Carga de vuelos exitosa."
+								"\n======================================================================================="
+								"=============================\n");
+					} else {
+						printf("\n========================================================================================"
+								"============================\n"
+								"Carga de vuelos fallida."
 								"\n======================================================================================="
 								"=============================\n");
 					}

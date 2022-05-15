@@ -64,21 +64,7 @@ int addPassenger(Passengers pPassenger[], int len_passenger, char pName[], int l
 			validation = 0;
 		}
 	}
-
-
 	return validation;
-}
-
-/**
-* \brief Creates an autoincremental interger for the field "ID"
-* \param void
-* \return Int - the new id created
-*
-*/
-int getNewId() {
-    static int id = 1000;
-    id++;
-    return id;
 }
 
 /**

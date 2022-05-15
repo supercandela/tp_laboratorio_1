@@ -1364,3 +1364,213 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
 gcc -o TP_[2].exe "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
 Info: Nothing to build for TP_[2]
+21:20:08 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GetData.o" "..\\src\\GetData.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passengers.o" "..\\src\\Passengers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+..\src\Flights.c:24:17: error: unknown type name 'Flights'
+   24 | int initFlights(Flights pFlight[], int len) {
+      |                 ^~~~~~~
+..\src\Flights.c:47:15: error: unknown type name 'Flights'
+   47 | int addFlight(Flights pFlight[], int len_flight, char flightCode[], int len_flightCode, char pDestination[], int len_destination,
+      |               ^~~~~~~
+..\src\Flights.c:75:25: error: unknown type name 'Flights'
+   75 | int getFirstEmptyFlight(Flights pFlight[], int len) {
+      |                         ^~~~~~~
+..\src\Flights.c:94:49: error: unknown type name 'Flights'
+   94 | int forcedLoadPassengersListWithPrechargeValues(Flights pFlight[], int len) {
+      |                                                 ^~~~~~~
+..\src\Flights.c:97:93: error: invalid digit "8" in octal constant
+   97 |   addFlight(pFlight, len, "ECR082903", LEN_FLIGHT_CODE, "El Cairo", LEN_TEXT_CHAR, 1, 2022, 08, 29);
+      |                                                                                             ^~
+..\src\Flights.c:98:91: error: invalid digit "9" in octal constant
+   98 |   addFlight(pFlight, len, "MDR091503", LEN_FLIGHT_CODE, "Madrid", LEN_TEXT_CHAR, 1, 2022, 09, 15);
+      |                                                                                           ^~
+..\src\Flights.c:101:102: error: invalid digit "9" in octal constant
+  101 |   addFlight(pFlight, len, "MDQ070902", LEN_FLIGHT_CODE, "Mar del Plata", LEN_TEXT_CHAR, 2, 2022, 07, 09);
+      |                                                                                                      ^~
+21:22:44 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+..\src\Flights.c:24:17: error: unknown type name 'Flights'
+   24 | int initFlights(Flights pFlight[], int len) {
+      |                 ^~~~~~~
+..\src\Flights.c:47:15: error: unknown type name 'Flights'
+   47 | int addFlight(Flights pFlight[], int len_flight, char flightCode[], int len_flightCode, char pDestination[], int len_destination,
+      |               ^~~~~~~
+..\src\Flights.c:75:25: error: unknown type name 'Flights'
+   75 | int getFirstEmptyFlight(Flights pFlight[], int len) {
+      |                         ^~~~~~~
+..\src\Flights.c:94:49: error: unknown type name 'Flights'
+   94 | int forcedLoadPassengersListWithPrechargeValues(Flights pFlight[], int len) {
+      |                                                 ^~~~~~~
+..\src\Flights.c:97:93: error: invalid digit "8" in octal constant
+   97 |   addFlight(pFlight, len, "ECR082903", LEN_FLIGHT_CODE, "El Cairo", LEN_TEXT_CHAR, 1, 2022, 08, 29);
+      |                                                                                             ^~
+..\src\Flights.c:98:91: error: invalid digit "9" in octal constant
+   98 |   addFlight(pFlight, len, "MDR091503", LEN_FLIGHT_CODE, "Madrid", LEN_TEXT_CHAR, 1, 2022, 09, 15);
+      |                                                                                           ^~
+..\src\Flights.c:101:102: error: invalid digit "9" in octal constant
+  101 |   addFlight(pFlight, len, "MDQ070902", LEN_FLIGHT_CODE, "Mar del Plata", LEN_TEXT_CHAR, 2, 2022, 07, 09);
+      |                                                                                                      ^~
+21:23:24 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+In file included from ..\src\TP_[2].c:16:
+..\src\Flights.h:40:5: error: conflicting types for 'forcedLoadPassengersListWithPrechargeValues'
+   40 | int forcedLoadPassengersListWithPrechargeValues(Flights pFlight[], int len);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\TP_[2].c:15:
+..\src\Passengers.h:44:5: note: previous declaration of 'forcedLoadPassengersListWithPrechargeValues' was here
+   44 | int forcedLoadPassengersListWithPrechargeValues(Passengers pPassenger[], int len_passenger);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\TP_[2].c: In function 'main':
+..\src\TP_[2].c:140:55: warning: passing argument 1 of 'forcedLoadPassengersListWithPrechargeValues' from incompatible pointer type [-Wincompatible-pointer-types]
+  140 |      if (!forcedLoadPassengersListWithPrechargeValues(passenger, LEN_PAX)){
+      |                                                       ^~~~~~~~~
+      |                                                       |
+      |                                                       Passengers * {aka struct <anonymous> *}
+In file included from ..\src\TP_[2].c:16:
+..\src\Flights.h:40:57: note: expected 'Flights *' {aka 'struct <anonymous> *'} but argument is of type 'Passengers *' {aka 'struct <anonymous> *'}
+   40 | int forcedLoadPassengersListWithPrechargeValues(Flights pFlight[], int len);
+      |                                                 ~~~~~~~~^~~~~~~~~
+21:24:21 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+..\src\Flights.c: In function 'forcedLoadFlightsListWithPrechargeValues':
+..\src\Flights.c:98:93: error: invalid digit "8" in octal constant
+   98 |   addFlight(pFlight, len, "ECR082903", LEN_FLIGHT_CODE, "El Cairo", LEN_TEXT_CHAR, 1, 2022, 08, 29);
+      |                                                                                             ^~
+..\src\Flights.c:99:91: error: invalid digit "9" in octal constant
+   99 |   addFlight(pFlight, len, "MDR091503", LEN_FLIGHT_CODE, "Madrid", LEN_TEXT_CHAR, 1, 2022, 09, 15);
+      |                                                                                           ^~
+..\src\Flights.c:102:102: error: invalid digit "9" in octal constant
+  102 |   addFlight(pFlight, len, "MDQ070902", LEN_FLIGHT_CODE, "Mar del Plata", LEN_TEXT_CHAR, 2, 2022, 07, 09);
+      |                                                                                                      ^~
+21:25:51 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+..\src\Flights.c: In function 'forcedLoadFlightsListWithPrechargeValues':
+..\src\Flights.c:102:101: error: invalid digit "9" in octal constant
+  102 |   addFlight(pFlight, len, "MDQ070902", LEN_FLIGHT_CODE, "Mar del Plata", LEN_TEXT_CHAR, 2, 2022, 7, 09);
+      |                                                                                                     ^~
+21:26:07 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+21:27:33 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]
+21:50:24 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+..\src\Flights.c: In function 'showFlight':
+..\src\Flights.c:124:7: warning: unused variable 'column_type' [-Wunused-variable]
+  124 |   int column_type = -20;
+      |       ^~~~~~~~~~~
+..\src\Flights.c:123:7: warning: unused variable 'column_text' [-Wunused-variable]
+  123 |   int column_text = -30;
+      |       ^~~~~~~~~~~
+..\src\Flights.c:122:7: warning: unused variable 'column_code' [-Wunused-variable]
+  122 |   int column_code = -12;
+      |       ^~~~~~~~~~~
+..\src\Flights.c:121:7: warning: unused variable 'column_id' [-Wunused-variable]
+  121 |   int column_id = 8;
+      |       ^~~~~~~~~
+..\src\Flights.c:144:45: error: 'column_id' undeclared (first use in this function)
+  144 |  printf("|%*d|%*s|%*s|%*s|%*s|%d/%d/%d|\n", column_id, flight.id, column_code, flight.flightCode, column_text, flight.destination,
+      |                                             ^~~~~~~~~
+..\src\Flights.c:144:45: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Flights.c:144:67: error: 'column_code' undeclared (first use in this function)
+  144 |  printf("|%*d|%*s|%*s|%*s|%*s|%d/%d/%d|\n", column_id, flight.id, column_code, flight.flightCode, column_text, flight.destination,
+      |                                                                   ^~~~~~~~~~~
+..\src\Flights.c:144:99: error: 'column_text' undeclared (first use in this function)
+  144 |  printf("|%*d|%*s|%*s|%*s|%*s|%d/%d/%d|\n", column_id, flight.id, column_code, flight.flightCode, column_text, flight.destination,
+      |                                                                                                   ^~~~~~~~~~~
+..\src\Flights.c:145:4: error: 'column_type' undeclared (first use in this function)
+  145 |    column_type, status, column_type, flight.year, flight.month, flight.day);
+      |    ^~~~~~~~~~~
+..\src\Flights.c:145:17: error: 'status' undeclared (first use in this function)
+  145 |    column_type, status, column_type, flight.year, flight.month, flight.day);
+      |                 ^~~~~~
+..\src\Flights.c: At top level:
+..\src\Flights.c:147:1: error: expected identifier or '(' before '}' token
+  147 | }
+      | ^
+..\src\Flights.c: In function 'printFlightsListHeader':
+..\src\Flights.c:166:32: warning: field width specifier '*' expects a matching 'int' argument [-Wformat=]
+  166 |  printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n", column_id, " ID", column_code, " Vuelo", column_text, " Destino",
+      |                               ~^~
+      |                                |
+      |                                int
+..\src\Flights.c:166:33: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  166 |  printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n", column_id, " ID", column_code, " Vuelo", column_text, " Destino",
+      |                               ~~^
+      |                                 |
+      |                                 char *
+21:50:42 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+..\src\Flights.c: In function 'showFlight':
+..\src\Flights.c:143:29: warning: format '%s' expects argument of type 'char *', but argument 11 has type 'int' [-Wformat=]
+  143 |  printf("|%*d|%*s|%*s|%*s|%*s|%d/%d/%d|\n", column_id, flight.id, column_code, flight.flightCode, column_text, flight.destination,
+      |                           ~~^
+      |                             |
+      |                             char *
+      |                           %*d
+  144 |    column_type, status, column_type, flight.year, flight.month, flight.day);
+      |                                      ~~~~~~~~~~~
+      |                                            |
+      |                                            int
+..\src\Flights.c:143:38: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  143 |  printf("|%*d|%*s|%*s|%*s|%*s|%d/%d/%d|\n", column_id, flight.id, column_code, flight.flightCode, column_text, flight.destination,
+      |                                     ~^
+      |                                      |
+      |                                      int
+..\src\Flights.c: In function 'printFlightsListHeader':
+..\src\Flights.c:165:32: warning: field width specifier '*' expects a matching 'int' argument [-Wformat=]
+  165 |  printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n", column_id, " ID", column_code, " Vuelo", column_text, " Destino",
+      |                               ~^~
+      |                                |
+      |                                int
+..\src\Flights.c:165:33: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  165 |  printf("|%*s|%*s|%*s|%*s|%*s|%*s|\n", column_id, " ID", column_code, " Vuelo", column_text, " Destino",
+      |                               ~~^
+      |                                 |
+      |                                 char *
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+21:52:09 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+..\src\Flights.c: In function 'showFlight':
+..\src\Flights.c:143:9: warning: too many arguments for format [-Wformat-extra-args]
+  143 |  printf("|%*d|%*s|%*s|%*s|%d/%d/%d|\n", column_id, flight.id, column_code, flight.flightCode, column_text, flight.destination,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+21:53:56 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+..\src\Flights.c: In function 'showFlight':
+..\src\Flights.c:143:29: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+  143 |  printf("|%*d|%*s|%*s|%*s|%*s|\n", column_id, flight.id, column_code, flight.flightCode, column_text, flight.destination,
+      |                           ~~^
+      |                             |
+      |                             char *
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+21:54:11 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+21:55:57 **** Incremental Build of configuration Debug for project TP_[2] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Flights.o" "..\\src\\Flights.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[2].o" "..\\src\\TP_[2].c" 
+gcc -o TP_[2].exe "src\\Flights.o" "src\\GetData.o" "src\\MenusReportsOthers.o" "src\\Passengers.o" "src\\TP_[2].o" 
+Info: Nothing to build for TP_[2]

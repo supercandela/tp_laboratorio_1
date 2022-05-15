@@ -33,7 +33,6 @@ typedef struct {
 int initPassengers(Passengers pPassenger[], int len);
 int addPassenger(Passengers pPassenger[], int len_passenger, char pName[], int len_name, char pLastName[], int len_last_name,
 		int passengerType, char flightCode[], int len_flightCode,float price);
-int getNewId();
 int getPassengersName(char pName[], int len_char, int tries);
 int getPassengersLastName(char pLastName[], int len_char, int tries);
 int getPassengersType(int *pPaxType, int tries);

@@ -16,6 +16,7 @@ int getFloat(float *pNumber, float minimumValue, float maximumValue);
 int getArrayOfLetters(char pChar[], int len);
 int getArrayOfLettersAndNumbers(char pChar[], int len);
 int doYouConfirm(void);
+int getNewId();
 
 //VALIDATIONS
 int isInt(char pValueToCheck[]);
