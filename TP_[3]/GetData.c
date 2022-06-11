@@ -103,7 +103,6 @@ int askFloatValue(float *pNumber, char * message, char * errorMessage, float min
 	validation = -1;
 	if (pNumber != NULL && message != NULL && errorMessage != NULL && tries >= 0 && minimumValue <= maximumValue){
 		do {
-			printf("\n====================================================================================================================\n");
 			printf("%s", message);
 			validation = getFloat(pNumber, minimumValue, maximumValue);
 			tries--;
@@ -182,7 +181,6 @@ int askArrayOfLettersValue(char * pArray, int len, char * message, char * errorM
 	validation = -1;
 	if (pArray != NULL && len > 0 && message != NULL && errorMessage != NULL && tries >= 0){
 		do {
-			printf("\n====================================================================================================================\n");
 			printf("%s", message);
 			validation = getArrayOfLetters(pArray, len);
 			tries--;
@@ -205,10 +203,9 @@ int getArrayOfLetters(char pChar[], int len) {
 	int validation;
 	char auxChar[50];
 	validation = -1;
-	if (pChar != NULL) {
+	if (pChar != NULL && len > 0) {
 		fflush( stdin );
 		fgets(auxChar, 50, stdin);
-		auxChar[strlen(auxChar)-1] = '\0';
 		if(isArrayOfLetters(auxChar)) {
 			strncpy(pChar, auxChar, len);
 			pChar[strlen(pChar)-1] = '\0';
@@ -255,11 +252,9 @@ int isArrayOfLetters(char pValueToCheck[]) {
 */
 int askArrayOfLettersAndNumbersValue(char * pArray, int len, char * message, char * errorMessage, int tries) {
 	int validation;
-	fflush( stdin );
 	validation = -1;
 	if (pArray != NULL && len > 0 && message != NULL && errorMessage != NULL && tries >= 0){
 		do {
-			printf("\n====================================================================================================================\n");
 			printf("%s", message);
 			validation = getArrayOfLettersAndNumbers(pArray, len);
 			tries--;
@@ -280,12 +275,11 @@ int askArrayOfLettersAndNumbersValue(char * pArray, int len, char * message, cha
 */
 int getArrayOfLettersAndNumbers(char pChar[], int len) {
 	int validation;
-	char auxChar[51];
+	char auxChar[50];
 	validation = -1;
-	if (pChar != NULL) {
+	if (pChar != NULL && len > 0) {
 		fflush( stdin );
-		fgets(auxChar, 51, stdin);
-		auxChar[strlen(auxChar)-1] = '\0';
+		fgets(auxChar, 50, stdin);
 		if(isArrayOfLettersAndNumbers(auxChar)) {
 			strncpy(pChar, auxChar, len);
 			pChar[strlen(pChar)-1] = '\0';

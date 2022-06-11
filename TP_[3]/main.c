@@ -28,12 +28,16 @@ int main() {
 
 	LinkedList* listaPasajeros = ll_newLinkedList();
 
+//	int newId;
+//	newId = getNewId();
+//	printf("\n%d", newId);
+
 	do {
 		printPrincipalMenu();
 		fflush(stdin);
 		exitValueGetOption = askIntValue(&menuOption,
 				"\n====================================================================================================================\n"
-				"Ingrese una opción: ", "La opción ingresada no es correcta.", 1, 10, 3);
+				"\nIngrese una opción: ", "La opción ingresada no es correcta.", 1, 10, 3);
 
 		if (exitValueGetOption == 0) {
 			switch (menuOption) {
@@ -43,28 +47,36 @@ int main() {
 				break;
 			case 2:
 				printf(" 2. Cargar los datos de los pasajeros desde el archivo data.csv (modo binario).\n");
+//				int controller_loadFromBinary(char* path , LinkedList* pArrayListPassenger);
 				break;
 			case 3:
-				printf(" 3. Alta de pasajero\n");
-				controller_addPassenger(listaPasajeros);
+				if (controller_addPassenger(listaPasajeros) != 0) {
+					printf("\nNo se pueden agregar pasajeros en este momento.\n");
+				}
 				break;
 			case 4:
 				printf(" 4. Modificar datos de pasajero\n");
+//				int controller_editPassenger(LinkedList* pArrayListPassenger);
 				break;
 			case 5:
 				printf(" 5. Baja de pasajero\n");
+//				int controller_removePassenger(LinkedList* pArrayListPassenger);
 				break;
 			case 6:
 				printf(" 6. Listar pasajeros\n");
+//				int controller_ListPassenger(LinkedList* pArrayListPassenger);
 				break;
 			case 7:
 				printf(" 7. Ordenar pasajeros\n");
+//				int controller_sortPassenger(LinkedList* pArrayListPassenger);
 				break;
 			case 8:
 				printf(" 8. Guardar los datos de los pasajeros en el archivo data.csv (modo texto).\n");
+//				int controller_saveAsText(char* path , LinkedList* pArrayListPassenger);
 				break;
 			case 9:
 				printf(" 9. Guardar los datos de los pasajeros en el archivo data.csv (modo binario).\n");
+//				int controller_saveAsBinary(char* path , LinkedList* pArrayListPassenger);
 				break;
 			case 10:
 				printf("\n============================================================================================="

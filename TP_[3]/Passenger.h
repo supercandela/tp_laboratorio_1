@@ -24,7 +24,7 @@ typedef struct
 } Passenger;
 
 Passenger* Passenger_new();
-Passenger* Passenger_newParametros(int id, char* nombre,char* apellido, float precio, int tipoPax, char* codigoVuelo);
+Passenger* Passenger_newParametros(char* nombre,char* apellido, float precio, int tipoPax, char* codigoVuelo);
 //void Passenger_delete();
 //
 int Passenger_setId(Passenger* this,int id);
@@ -45,6 +45,6 @@ int Passenger_getTipoPasajero(Passenger* this, int * tipoPasajero);
 int Passenger_setPrecio(Passenger* this, float precio);
 int Passenger_getPrecio(Passenger* this, float * precio);
 
-//int getNewId();
+int getNewId();
 
 #endif /* PASSENGER_H_ */

@@ -41,12 +41,14 @@ Passenger* Passenger_new() {
 * \return puntero a Passenger creado
 *
 */
-Passenger* Passenger_newParametros(int id, char* nombre,char* apellido, float precio,
+Passenger* Passenger_newParametros(char* nombre,char* apellido, float precio,
 		int tipoPax, char* codigoVuelo) {
 	Passenger *pPassenger;
 	pPassenger = Passenger_new();
-
-	if (pPassenger != NULL) {
+	int id;
+	id = getNewId();
+	if (pPassenger != NULL && id > 0 && nombre != NULL && apellido != NULL
+			&& precio > 0 && tipoPax > 0 && tipoPax < 4 && codigoVuelo != NULL) {
 		Passenger_setId(pPassenger, id);
 		Passenger_setNombre(pPassenger, nombre, 50);
 		Passenger_setApellido(pPassenger, apellido, 50);
@@ -274,8 +276,21 @@ int Passenger_getPrecio(Passenger* this, float * precio) {
 * \return Int - the new id created
 *
 */
-//int getNewId() {
-//    static int id = 0;
-//    id++;
-//    return id;
-//}
+int getNewId() {
+
+    int idToSet;
+    int id = -1;
+    FILE * idSaver;
+
+    if((idSaver=fopen("idGenerator.dat","rb"))==NULL)
+    {
+    	idToSet = id;
+    } else {
+    	fread ( &id , sizeof(int) , 1 , idSaver );
+    	idToSet = id;
+    	id++;
+    	fwrite ( &id , sizeof(int) , 1 , idSaver );
+		fclose(idSaver); //Se cierra el archivo
+    }
+    return idToSet;
+}

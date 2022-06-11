@@ -11,6 +11,12 @@
 #include <string.h>
 #include "GetData.h"
 
+//passengerType
+#define FIRSTCLASS 1
+#define EXECUTIVECLASS 2
+#define ECONOMYCLASS 3
+#define LEN_PAXTYPE 50
+
 /**
 * \brief Prints the wellcome message on the screen
 * \param void
@@ -28,6 +34,7 @@ void printWellcomeMessage() {
 *
 */
 void printPrincipalMenu() {
+	printf("\n====================================================================================================================\n");
 	printf("OPCIONES:\n");
 	printf(" 1. Cargar los datos de los pasajeros desde el archivo data.csv (modo texto).\n");
 	printf(" 2. Cargar los datos de los pasajeros desde el archivo data.csv (modo binario).\n");
@@ -52,26 +59,24 @@ void printPrincipalMenu() {
 *
 */
 void printSubMenuAddPax(char name[], char lastName[], int passengerType, char flightCode[], float price) {
-	char paxType[15];
+	char paxType[LEN_PAXTYPE];
+	printf("\n====================================================================================================================\n");
 	printf("1. Nombre Pasajero: 	%s\n", name);
 	printf("2. Apellido Pasajero: 	%s\n", lastName);
 	if (passengerType < 1) {
 		printf("3. Tipo de Pasajero:\n");
 	} else {
-//		switch(passengerType) {
-//			case FIRST_CLASS:
-//				strncpy( paxType, "First Class", 15);
-//				break;
-//			case BUSINESS:
-//				strncpy( paxType, "Business", 15);
-//				break;
-//			case PREMIUM:
-//				strncpy( paxType, "Premium", 15);
-//				break;
-//			case TURIST:
-//				strncpy( paxType, "Turist", 15);
-//				break;
-//		}
+		switch(passengerType) {
+			case FIRSTCLASS:
+				strncpy( paxType, "First Class", LEN_PAXTYPE);
+				break;
+			case EXECUTIVECLASS:
+				strncpy( paxType, "Executive Class", LEN_PAXTYPE);
+				break;
+			case ECONOMYCLASS:
+				strncpy( paxType, "Economy Class", LEN_PAXTYPE);
+				break;
+		}
 		printf("3. Tipo de Pasajero: 	%s\n", paxType);
 	}
 	printf("4. Código del vuelo: 	%s\n", flightCode);
