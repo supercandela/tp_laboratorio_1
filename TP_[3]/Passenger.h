@@ -8,6 +8,9 @@
 #ifndef PASSENGER_H_
 #define PASSENGER_H_
 
+
+#include "LinkedList.h"
+
 //passengerType
 #define FIRSTCLASS 1
 #define EXECUTIVECLASS 2
@@ -19,8 +22,9 @@ typedef struct
 	char nombre[50];
 	char apellido[50];
 	float precio;
-	int tipoPasajero;
 	char codigoVuelo[8];
+	int tipoPasajero;
+	int estadoVuelo;
 } Passenger;
 
 Passenger* Passenger_new();
@@ -46,5 +50,7 @@ int Passenger_setPrecio(Passenger* this, float precio);
 int Passenger_getPrecio(Passenger* this, float * precio);
 
 int getNewId();
+
+int printPassengers(LinkedList* pArrayListPassenger);
 
 #endif /* PASSENGER_H_ */

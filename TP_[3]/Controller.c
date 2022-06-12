@@ -10,14 +10,40 @@
 #define LEN_TEXT_CHAR 50
 
 /** \brief Carga los datos de los pasajeros desde el archivo data.csv (modo texto).
- *
  * \param path char*
  * \param pArrayListPassenger LinkedList*
  * \return int
  *
  */
 int controller_loadFromText(char *path, LinkedList *pArrayListPassenger) {
-	return 1;
+	int validation;
+	validation = -1;
+	if(path != NULL && pArrayListPassenger != NULL) {
+	    FILE * textFile;
+
+		int cant;
+		char aux1[128];
+		char aux2[128];
+		char aux3[128];
+		char aux4[128];
+		char aux5[128];
+		char aux6[128];
+		char aux7[128];
+
+	    if((textFile = fopen(path,"r")) == NULL) {
+			printf("No se pudo abrir el archivo");
+	    } else {
+	    	do {
+	    		cant = fscanf(textFile, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n", aux1, aux2, aux3, aux4, aux5, aux6, aux7);
+		    	if (cant == 7) {
+		    		printf("%s - %s - %s - %s - %s - %s - %s\n", aux1, aux2, aux3, aux4, aux5, aux6, aux7);
+		    	}
+	    	} while (cant == 7);
+			fclose(textFile);
+			validation = 0;
+	    }
+	}
+	return validation;
 }
 
 /** \brief Carga los datos de los pasajeros desde el archivo data.csv (modo binario).
@@ -29,38 +55,6 @@ int controller_loadFromText(char *path, LinkedList *pArrayListPassenger) {
  */
 int controller_loadFromBinary(char *path, LinkedList *pArrayListPassenger) {
 	return 1;
-}
-
-/**
- * \brief Prints one passenger on a formated list
- * \param Passengers passenger
- * \return void
- *
- */
-void showPax(Passenger *pax) {
-	if (pax != NULL) {
-		int column_id = 8;
-		int column_text = -30;
-		int column_type = -20;
-		int column_code = -12;
-		int column_price = 15 - 1; //resto 1 por el signo
-		char paxType[15];
-		switch (pax->tipoPasajero) {
-		case 1:
-			strncpy(paxType, "First Class", 15);
-			break;
-		case 2:
-			strncpy(paxType, "Executive", 15);
-			break;
-		case 3:
-			strncpy(paxType, "Economy", 15);
-			break;
-		}
-		printf("|%*d|%*s|%*s|%*s|%*s|$%*.2f|\n", column_id, pax->id,
-				column_text, pax->apellido, column_text, pax->nombre,
-				column_type, paxType, column_code, pax->codigoVuelo,
-				column_price, pax->precio);
-	}
 }
 
 /** \brief Alta de pasajero
@@ -82,7 +76,6 @@ int controller_addPassenger(LinkedList *pArrayListPassenger) {
 		int exitValueGetOptionSubMenu;
 		int submenuOption;
 		Passenger *auxPax;
-		int prueba;
 
 		do {
 			printSubMenuAddPax(pName, pLastName, auxTipoPax, pFlightCode,
@@ -131,16 +124,16 @@ int controller_addPassenger(LinkedList *pArrayListPassenger) {
 						printf(
 								"El pasajero no fue salvado. Intente nuevamente.\n");
 					} else {
-						printf("Pasajero guardado.\n");
-						prueba = ll_add(pArrayListPassenger, auxPax);
-						printf("prueba %d\n", prueba);
-						auxPax = ll_get(pArrayListPassenger, 0);
-						showPax(auxPax);
-						strncpy(pName, " ", LEN_TEXT_CHAR);
-						strncpy(pLastName, " ", LEN_TEXT_CHAR);
-						auxTipoPax = -1;
-						strncpy(pFlightCode, " ", LEN_TEXT_CHAR);
-						auxPrice = -1;
+						if (!ll_add(pArrayListPassenger, auxPax)){
+							printf("Pasajero guardado.\n");
+							strncpy(pName, " ", LEN_TEXT_CHAR);
+							strncpy(pLastName, " ", LEN_TEXT_CHAR);
+							auxTipoPax = -1;
+							strncpy(pFlightCode, " ", LEN_TEXT_CHAR);
+							auxPrice = -1;
+						} else {
+							printf("Se produjo un error. Pasajero NO guardado.\n");
+						}
 					}
 					break;
 				case 7:
@@ -186,13 +179,17 @@ int controller_removePassenger(LinkedList *pArrayListPassenger) {
 
 /** \brief Listar pasajeros
  *
- * \param path char*
  * \param pArrayListPassenger LinkedList*
- * \return int
+ * \return int 0 =  Success / -1 = Error
  *
  */
 int controller_ListPassenger(LinkedList *pArrayListPassenger) {
-	return 1;
+	int validation;
+	validation = -1;
+	if (pArrayListPassenger != NULL) {
+		validation = printPassengers(pArrayListPassenger);
+	}
+	return validation;
 }
 
 /** \brief Ordenar pasajeros

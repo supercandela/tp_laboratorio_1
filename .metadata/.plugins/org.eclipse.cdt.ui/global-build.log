@@ -1544,3 +1544,535 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
 gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
 Info: Nothing to build for TP_[3]
+17:50:46 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:37:45: error: incompatible type for argument 2 of 'll_add'
+   37 |        prueba = ll_add(pArrayListPassenger, auxPax);
+      |                                             ^~~~~~
+      |                                             |
+      |                                             Passenger {aka struct <anonymous>}
+In file included from ..\Controller.c:4:
+..\LinkedList.h:45:36: note: expected 'void *' but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+   45 | int ll_add(LinkedList* this, void* pElement);
+      |                              ~~~~~~^~~~~~~~
+..\Controller.c:25:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   25 |   int prueba;
+      |       ^~~~~~
+..\Controller.c: In function 'controller_addPassenger':
+..\Controller.c:76:7: warning: unused variable 'prueba' [-Wunused-variable]
+   76 |   int prueba;
+      |       ^~~~~~
+17:53:14 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:31:21: error: incompatible type for argument 1 of 'fread'
+   31 |        cant = fread(auxPax, sizeof(Passenger), 1, textFile);
+      |                     ^~~~~~
+      |                     |
+      |                     Passenger {aka struct <anonymous>}
+In file included from ..\Controller.c:1:
+c:\mingw\include\stdio.h:767:48: note: expected 'void *' but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+  767 | _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+      |                                                ^~~~~~
+..\Controller.c:37:45: error: incompatible type for argument 2 of 'll_add'
+   37 |        prueba = ll_add(pArrayListPassenger, auxPax);
+      |                                             ^~~~~~
+      |                                             |
+      |                                             Passenger {aka struct <anonymous>}
+In file included from ..\Controller.c:4:
+..\LinkedList.h:45:36: note: expected 'void *' but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+   45 | int ll_add(LinkedList* this, void* pElement);
+      |                              ~~~~~~^~~~~~~~
+..\Controller.c:25:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   25 |   int prueba;
+      |       ^~~~~~
+..\Controller.c: In function 'controller_addPassenger':
+..\Controller.c:76:7: warning: unused variable 'prueba' [-Wunused-variable]
+   76 |   int prueba;
+      |       ^~~~~~
+17:53:32 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:25:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   25 |   int prueba;
+      |       ^~~~~~
+..\Controller.c: In function 'controller_addPassenger':
+..\Controller.c:76:7: warning: unused variable 'prueba' [-Wunused-variable]
+   76 |   int prueba;
+      |       ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList *pArrayListPassenger);
+      |                     ^~~~~~~~~~
+..\Passenger.c: In function 'showPax':
+..\Passenger.c:324:95: warning: passing argument 2 of 'Passenger_getTipoPasajero' makes pointer from integer without a cast [-Wint-conversion]
+  324 |     && !Passenger_getNombre(pax, auxNombre, LEN_CHAR_TEXT) && !Passenger_getTipoPasajero(pax, auxTipoPax)
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\Passenger.c:231:54: note: expected 'int *' but argument is of type 'int'
+  231 | int Passenger_getTipoPasajero(Passenger* this, int * tipoPasajero) {
+      |                                                ~~~~~~^~~~~~~~~~~~
+..\Passenger.c:325:34: error: incompatible type for argument 2 of 'Passenger_getPrecio'
+  325 |     && !Passenger_getPrecio(pax, auxPrecio) && !Passenger_getCodigoVuelo(pax, auxCodigo, 20)){
+      |                                  ^~~~~~~~~
+      |                                  |
+      |                                  float
+..\Passenger.c:265:50: note: expected 'float *' but argument is of type 'float'
+  265 | int Passenger_getPrecio(Passenger* this, float * precio) {
+      |                                          ~~~~~~~~^~~~~~
+..\Passenger.c: At top level:
+..\Passenger.c:373:21: error: unknown type name 'LinkedList'
+  373 | int printPassengers(LinkedList *pArrayListPassenger) {
+      |                     ^~~~~~~~~~
+17:53:57 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o MenusReportsOthers.o "..\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList *pArrayListPassenger);
+      |                     ^~~~~~~~~~
+..\Passenger.c: In function 'showPax':
+..\Passenger.c:324:95: warning: passing argument 2 of 'Passenger_getTipoPasajero' makes pointer from integer without a cast [-Wint-conversion]
+  324 |     && !Passenger_getNombre(pax, auxNombre, LEN_CHAR_TEXT) && !Passenger_getTipoPasajero(pax, auxTipoPax)
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\Passenger.c:231:54: note: expected 'int *' but argument is of type 'int'
+  231 | int Passenger_getTipoPasajero(Passenger* this, int * tipoPasajero) {
+      |                                                ~~~~~~^~~~~~~~~~~~
+..\Passenger.c: At top level:
+..\Passenger.c:373:21: error: unknown type name 'LinkedList'
+  373 | int printPassengers(LinkedList *pArrayListPassenger) {
+      |                     ^~~~~~~~~~
+17:54:44 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList *pArrayListPassenger);
+      |                     ^~~~~~~~~~
+..\Passenger.c: In function 'showPax':
+..\Passenger.c:325:95: warning: passing argument 2 of 'Passenger_getTipoPasajero' makes pointer from integer without a cast [-Wint-conversion]
+  325 |     && !Passenger_getNombre(pax, auxNombre, LEN_CHAR_TEXT) && !Passenger_getTipoPasajero(pax, auxTipoPax)
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\Passenger.c:232:54: note: expected 'int *' but argument is of type 'int'
+  232 | int Passenger_getTipoPasajero(Passenger* this, int * tipoPasajero) {
+      |                                                ~~~~~~^~~~~~~~~~~~
+..\Passenger.c: In function 'printPassengers':
+..\Passenger.c:384:11: error: incompatible types when assigning to type 'Passenger' {aka 'struct <anonymous>'} from type 'void *'
+  384 |     aux = ll_get(pArrayListPassenger, i);
+      |           ^~~~~~
+..\Passenger.c:385:13: error: incompatible type for argument 1 of 'showPax'
+  385 |     showPax(aux);
+      |             ^~~
+      |             |
+      |             Passenger {aka struct <anonymous>}
+..\Passenger.c:309:25: note: expected 'Passenger *' {aka 'struct <anonymous> *'} but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+  309 | void showPax(Passenger *pax) {
+      |              ~~~~~~~~~~~^~~
+17:55:52 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:25:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   25 |   int prueba;
+      |       ^~~~~~
+..\Controller.c: In function 'controller_addPassenger':
+..\Controller.c:76:7: warning: unused variable 'prueba' [-Wunused-variable]
+   76 |   int prueba;
+      |       ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList* pArrayListPassenger);
+      |                     ^~~~~~~~~~
+..\Passenger.c: In function 'showPax':
+..\Passenger.c:325:95: warning: passing argument 2 of 'Passenger_getTipoPasajero' makes pointer from integer without a cast [-Wint-conversion]
+  325 |     && !Passenger_getNombre(pax, auxNombre, LEN_CHAR_TEXT) && !Passenger_getTipoPasajero(pax, auxTipoPax)
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\Passenger.c:232:54: note: expected 'int *' but argument is of type 'int'
+  232 | int Passenger_getTipoPasajero(Passenger* this, int * tipoPasajero) {
+      |                                                ~~~~~~^~~~~~~~~~~~
+..\Passenger.c: In function 'printPassengers':
+..\Passenger.c:384:11: error: incompatible types when assigning to type 'Passenger' {aka 'struct <anonymous>'} from type 'void *'
+  384 |     aux = ll_get(pArrayListPassenger, i);
+      |           ^~~~~~
+..\Passenger.c:385:13: error: incompatible type for argument 1 of 'showPax'
+  385 |     showPax(aux);
+      |             ^~~
+      |             |
+      |             Passenger {aka struct <anonymous>}
+..\Passenger.c:309:25: note: expected 'Passenger *' {aka 'struct <anonymous> *'} but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+  309 | void showPax(Passenger *pax) {
+      |              ~~~~~~~~~~~^~~
+18:01:44 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList* pArrayListPassenger);
+      |                     ^~~~~~~~~~
+..\Passenger.c: In function 'showPax':
+..\Passenger.c:325:95: warning: passing argument 2 of 'Passenger_getTipoPasajero' makes pointer from integer without a cast [-Wint-conversion]
+  325 |     && !Passenger_getNombre(pax, auxNombre, LEN_CHAR_TEXT) && !Passenger_getTipoPasajero(pax, auxTipoPax)
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\Passenger.c:232:54: note: expected 'int *' but argument is of type 'int'
+  232 | int Passenger_getTipoPasajero(Passenger* this, int * tipoPasajero) {
+      |                                                ~~~~~~^~~~~~~~~~~~
+..\Passenger.c: In function 'printPassengers':
+..\Passenger.c:385:18: warning: passing argument 1 of 'll_get' from incompatible pointer type [-Wincompatible-pointer-types]
+  385 |     aux = ll_get(&pArrayListPassenger, i);
+      |                  ^~~~~~~~~~~~~~~~~~~~
+      |                  |
+      |                  LinkedList ** {aka struct LinkedList **}
+In file included from ..\Passenger.c:12:
+..\LinkedList.h:47:7: note: expected 'LinkedList *' {aka 'struct LinkedList *'} but argument is of type 'LinkedList **' {aka 'struct LinkedList **'}
+   47 | void* ll_get(LinkedList* this, int index);
+      |       ^~~~~~
+..\Passenger.c:385:11: error: incompatible types when assigning to type 'Passenger' {aka 'struct <anonymous>'} from type 'void *'
+  385 |     aux = ll_get(&pArrayListPassenger, i);
+      |           ^~~~~~
+..\Passenger.c:386:13: error: incompatible type for argument 1 of 'showPax'
+  386 |     showPax(aux);
+      |             ^~~
+      |             |
+      |             Passenger {aka struct <anonymous>}
+..\Passenger.c:309:25: note: expected 'Passenger *' {aka 'struct <anonymous> *'} but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+  309 | void showPax(Passenger *pax) {
+      |              ~~~~~~~~~~~^~~
+18:02:24 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList* pArrayListPassenger);
+      |                     ^~~~~~~~~~
+..\Passenger.c: In function 'showPax':
+..\Passenger.c:325:95: warning: passing argument 2 of 'Passenger_getTipoPasajero' makes pointer from integer without a cast [-Wint-conversion]
+  325 |     && !Passenger_getNombre(pax, auxNombre, LEN_CHAR_TEXT) && !Passenger_getTipoPasajero(pax, auxTipoPax)
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\Passenger.c:232:54: note: expected 'int *' but argument is of type 'int'
+  232 | int Passenger_getTipoPasajero(Passenger* this, int * tipoPasajero) {
+      |                                                ~~~~~~^~~~~~~~~~~~
+..\Passenger.c: In function 'printPassengers':
+..\Passenger.c:385:11: error: incompatible types when assigning to type 'Passenger' {aka 'struct <anonymous>'} from type 'void *'
+  385 |     aux = ll_get(pArrayListPassenger, 0);
+      |           ^~~~~~
+..\Passenger.c:386:13: error: incompatible type for argument 1 of 'showPax'
+  386 |     showPax(aux);
+      |             ^~~
+      |             |
+      |             Passenger {aka struct <anonymous>}
+..\Passenger.c:309:25: note: expected 'Passenger *' {aka 'struct <anonymous> *'} but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+  309 | void showPax(Passenger *pax) {
+      |              ~~~~~~~~~~~^~~
+18:03:02 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList* pArrayListPassenger);
+      |                     ^~~~~~~~~~
+..\Passenger.c: In function 'showPax':
+..\Passenger.c:325:95: warning: passing argument 2 of 'Passenger_getTipoPasajero' makes pointer from integer without a cast [-Wint-conversion]
+  325 |     && !Passenger_getNombre(pax, auxNombre, LEN_CHAR_TEXT) && !Passenger_getTipoPasajero(pax, auxTipoPax)
+      |                                                                                               ^~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\Passenger.c:232:54: note: expected 'int *' but argument is of type 'int'
+  232 | int Passenger_getTipoPasajero(Passenger* this, int * tipoPasajero) {
+      |                                                ~~~~~~^~~~~~~~~~~~
+..\Passenger.c: In function 'printPassengers':
+..\Passenger.c:385:5: error: invalid type argument of unary '*' (have 'Passenger' {aka 'struct <anonymous>'})
+  385 |     *aux = ll_get(pArrayListPassenger, i);
+      |     ^~~~
+..\Passenger.c:386:13: error: incompatible type for argument 1 of 'showPax'
+  386 |     showPax(aux);
+      |             ^~~
+      |             |
+      |             Passenger {aka struct <anonymous>}
+..\Passenger.c:309:25: note: expected 'Passenger *' {aka 'struct <anonymous> *'} but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+  309 | void showPax(Passenger *pax) {
+      |              ~~~~~~~~~~~^~~
+18:03:22 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList* pArrayListPassenger);
+      |                     ^~~~~~~~~~
+..\Passenger.c: In function 'printPassengers':
+..\Passenger.c:385:5: error: invalid type argument of unary '*' (have 'Passenger' {aka 'struct <anonymous>'})
+  385 |     *aux = ll_get(pArrayListPassenger, i);
+      |     ^~~~
+..\Passenger.c:386:13: error: incompatible type for argument 1 of 'showPax'
+  386 |     showPax(aux);
+      |             ^~~
+      |             |
+      |             Passenger {aka struct <anonymous>}
+..\Passenger.c:309:25: note: expected 'Passenger *' {aka 'struct <anonymous> *'} but argument is of type 'Passenger' {aka 'struct <anonymous>'}
+  309 | void showPax(Passenger *pax) {
+      |              ~~~~~~~~~~~^~~
+18:05:25 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+In file included from ..\Passenger.c:11:
+..\Passenger.h:50:21: error: unknown type name 'LinkedList'
+   50 | int printPassengers(LinkedList* pArrayListPassenger);
+      |                     ^~~~~~~~~~
+18:08:52 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:25:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   25 |   int prueba;
+      |       ^~~~~~
+..\Controller.c: In function 'controller_addPassenger':
+..\Controller.c:76:7: warning: unused variable 'prueba' [-Wunused-variable]
+   76 |   int prueba;
+      |       ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+18:09:31 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:25:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   25 |   int prueba;
+      |       ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+18:21:00 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:25:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   25 |   int prueba;
+      |       ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+18:22:55 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:31:8: warning: implicit declaration of function 'showPax' [-Wimplicit-function-declaration]
+   31 |        showPax(auxPax);
+      |        ^~~~~~~
+..\Controller.c:25:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   25 |   int prueba;
+      |       ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+18:37:52 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:23:6: error: unknown type name 'PassengerFromCSV'
+   23 |      PassengerFromCSV lecturaPrevia;
+      |      ^~~~~~~~~~~~~~~~
+..\Controller.c:31:44: error: 'PassengerFromCSV' undeclared (first use in this function)
+   31 |        cant = fread(&lecturaPrevia, sizeof(PassengerFromCSV), 1, textFile);
+      |                                            ^~~~~~~~~~~~~~~~
+..\Controller.c:31:44: note: each undeclared identifier is reported only once for each function it appears in
+..\Controller.c:32:66: error: request for member 'id' in something not a structure or union
+   32 |        printf("%s - %s - %s - %s - %s - %s - %s\n", lecturaPrevia.id, lecturaPrevia.nombre, lecturaPrevia.apellido,
+      |                                                                  ^
+..\Controller.c:32:84: error: request for member 'nombre' in something not a structure or union
+   32 |        printf("%s - %s - %s - %s - %s - %s - %s\n", lecturaPrevia.id, lecturaPrevia.nombre, lecturaPrevia.apellido,
+      |                                                                                    ^
+..\Controller.c:32:106: error: request for member 'apellido' in something not a structure or union
+   32 |        printf("%s - %s - %s - %s - %s - %s - %s\n", lecturaPrevia.id, lecturaPrevia.nombre, lecturaPrevia.apellido,
+      |                                                                                                          ^
+..\Controller.c:33:23: error: request for member 'precio' in something not a structure or union
+   33 |          lecturaPrevia.precio, lecturaPrevia.codigoVuelo, lecturaPrevia.tipoPasajero, lecturaPrevia.estadoVuelo);
+      |                       ^
+..\Controller.c:33:45: error: request for member 'codigoVuelo' in something not a structure or union
+   33 |          lecturaPrevia.precio, lecturaPrevia.codigoVuelo, lecturaPrevia.tipoPasajero, lecturaPrevia.estadoVuelo);
+      |                                             ^
+..\Controller.c:33:72: error: request for member 'tipoPasajero' in something not a structure or union
+   33 |          lecturaPrevia.precio, lecturaPrevia.codigoVuelo, lecturaPrevia.tipoPasajero, lecturaPrevia.estadoVuelo);
+      |                                                                        ^
+..\Controller.c:33:100: error: request for member 'estadoVuelo' in something not a structure or union
+   33 |          lecturaPrevia.precio, lecturaPrevia.codigoVuelo, lecturaPrevia.tipoPasajero, lecturaPrevia.estadoVuelo);
+      |                                                                                                    ^
+..\Controller.c:26:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   26 |   int prueba;
+      |       ^~~~~~
+18:38:49 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:36:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   36 |   int prueba;
+      |       ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+20:50:30 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:36:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   36 |   int prueba;
+      |       ^~~~~~
+..\Controller.c:35:7: warning: unused variable 'cant' [-Wunused-variable]
+   35 |   int cant;
+      |       ^~~~
+..\Controller.c:19:6: warning: variable 'validation' set but not used [-Wunused-but-set-variable]
+   19 |  int validation;
+      |      ^~~~~~~~~~
+..\Controller.c: At top level:
+..\Controller.c:53:2: error: expected identifier or '(' before 'return'
+   53 |  return validation;
+      |  ^~~~~~
+..\Controller.c:54:1: error: expected identifier or '(' before '}' token
+   54 | }
+      | ^
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:52:2: warning: control reaches end of non-void function [-Wreturn-type]
+   52 |  }
+      |  ^
+20:50:33 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:36:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   36 |   int prueba;
+      |       ^~~~~~
+..\Controller.c:35:7: warning: unused variable 'cant' [-Wunused-variable]
+   35 |   int cant;
+      |       ^~~~
+..\Controller.c:19:6: warning: variable 'validation' set but not used [-Wunused-but-set-variable]
+   19 |  int validation;
+      |      ^~~~~~~~~~
+..\Controller.c: At top level:
+..\Controller.c:53:2: error: expected identifier or '(' before 'return'
+   53 |  return validation;
+      |  ^~~~~~
+..\Controller.c:54:1: error: expected identifier or '(' before '}' token
+   54 | }
+      | ^
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:52:2: warning: control reaches end of non-void function [-Wreturn-type]
+   52 |  }
+      |  ^
+20:51:47 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:36:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   36 |   int prueba;
+      |       ^~~~~~
+..\Controller.c:35:7: warning: unused variable 'cant' [-Wunused-variable]
+   35 |   int cant;
+      |       ^~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+20:52:32 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:35:7: warning: variable 'prueba' set but not used [-Wunused-but-set-variable]
+   35 |   int prueba;
+      |       ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+21:23:50 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:35:7: warning: unused variable 'prueba' [-Wunused-variable]
+   35 |   int prueba;
+      |       ^~~~~~
+..\Controller.c:34:16: warning: unused variable 'auxPax' [-Wunused-variable]
+   34 |      Passenger auxPax;
+      |                ^~~~~~
+..\Controller.c:33:23: warning: unused variable 'lecturaPrevia' [-Wunused-variable]
+   33 |      PassengerFromCSV lecturaPrevia;
+      |                       ^~~~~~~~~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+21:52:44 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:24:16: warning: unused variable 'auxPax' [-Wunused-variable]
+   24 |      Passenger auxPax;
+      |                ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+22:04:15 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:24:16: warning: unused variable 'auxPax' [-Wunused-variable]
+   24 |      Passenger auxPax;
+      |                ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+22:09:58 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:24:16: warning: unused variable 'auxPax' [-Wunused-variable]
+   24 |      Passenger auxPax;
+      |                ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+22:40:07 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:24:16: warning: unused variable 'auxPax' [-Wunused-variable]
+   24 |      Passenger auxPax;
+      |                ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+22:47:22 **** Incremental Build of configuration Debug for project TP_[3] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromText':
+..\Controller.c:24:16: warning: unused variable 'auxPax' [-Wunused-variable]
+   24 |      Passenger auxPax;
+      |                ^~~~~~
+gcc "-LC:\\Users\\super\\repos\\tp_laboratorio_1\\TP_[3]" -o TP_[3].exe Controller.o GetData.o GetPassengerData.o MenusReportsOthers.o Passenger.o main.o parser.o -lLinkedList 
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]
+Info: Nothing to build for TP_[3]

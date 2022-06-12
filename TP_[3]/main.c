@@ -19,7 +19,6 @@
 
 int main() {
 	setbuf(stdout, NULL);
-//	printf("Anduvo de nuevo\n");
 
 	int exitValueGetOption;
 	int menuOption;
@@ -27,10 +26,6 @@ int main() {
 	printWellcomeMessage();
 
 	LinkedList* listaPasajeros = ll_newLinkedList();
-
-//	int newId;
-//	newId = getNewId();
-//	printf("\n%d", newId);
 
 	do {
 		printPrincipalMenu();
@@ -42,8 +37,9 @@ int main() {
 		if (exitValueGetOption == 0) {
 			switch (menuOption) {
 			case 1:
-				printf(" 1. Cargar los datos de los pasajeros desde el archivo data.csv (modo texto).\n");
-				//controller_loadFromText("data.csv",listaPasajeros);
+				if (controller_loadFromText("data.csv", listaPasajeros) != 0) {
+					printf("\nNo se pueden cargar los datos de los pasajeros desde el archivo en este momento.\n");
+				}
 				break;
 			case 2:
 				printf(" 2. Cargar los datos de los pasajeros desde el archivo data.csv (modo binario).\n");
@@ -63,8 +59,9 @@ int main() {
 //				int controller_removePassenger(LinkedList* pArrayListPassenger);
 				break;
 			case 6:
-				printf(" 6. Listar pasajeros\n");
-//				int controller_ListPassenger(LinkedList* pArrayListPassenger);
+				if (controller_ListPassenger(listaPasajeros) != 0) {
+					printf("\nNo se pueden listar los pasajeros en este momento.\n");
+				}
 				break;
 			case 7:
 				printf(" 7. Ordenar pasajeros\n");

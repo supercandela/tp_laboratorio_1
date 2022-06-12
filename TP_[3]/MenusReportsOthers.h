@@ -14,12 +14,4 @@ void printWellcomeMessage();
 void printPrincipalMenu();
 void printSubMenuAddPax(char name[], char lastName[], int passengerType, char flightCode[], float price);
 
-
-
-//------> VIEJAS
-
-
-int printSubMenuModifyPax(char name[], char lastName[], int passengerType, char flightCode[], float price);
-int printSubMenuReports();
-
 #endif /* MENUSREPORTSOTHERS_H_ */
