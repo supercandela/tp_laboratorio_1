@@ -228,11 +228,50 @@ int isArrayOfLetters(char pValueToCheck[]) {
 	int flagSpace;
 	flagSpace = 0;
 	for (i = 0; i < len; i++) {
+		switch(pValueToCheck[i]) {
+			case 'Á':
+				pValueToCheck[i] = 'A';
+				break;
+			case 'á':
+				pValueToCheck[i] = 'a';
+				break;
+			case 'É':
+				pValueToCheck[i] = 'E';
+				break;
+			case 'é':
+				pValueToCheck[i] = 'e';
+				break;
+			case 'Í':
+				pValueToCheck[i] ='I';
+				break;
+			case 'í':
+				pValueToCheck[i] = 'i';
+				break;
+			case 'Ó':
+				pValueToCheck[i] = 'O';
+				break;
+			case 'ó':
+				pValueToCheck[i] = 'o';
+				break;
+			case 'Ú':
+				pValueToCheck[i] = 'U';
+				break;
+			case 'ú':
+				pValueToCheck[i] = 'u';
+				break;
+			case 'Ñ':
+				pValueToCheck[i] = 'N';
+				break;
+			case 'ñ':
+				pValueToCheck[i] = 'n';
+				break;
+		}
+
 		if(pValueToCheck[i] == ' ') {
 			flagSpace++;
 		}
 		if ((pValueToCheck[i] != ' ' && pValueToCheck[i] < 'A') || (pValueToCheck[i] > 'Z' && pValueToCheck[i] < 'a')
-				|| pValueToCheck[i] > 'z' || flagSpace > 2) {
+				|| pValueToCheck[i] > 'z' || flagSpace > 2 || pValueToCheck[i] == 181) {
 			validation = 0;
 			break;
 		}
@@ -315,16 +354,15 @@ int isArrayOfLettersAndNumbers(char pValueToCheck[]) {
 * \return Int (0 : false - 1 : true)
 *
 */
-//int doYouConfirm(void) {
-//	int validation;
-//	validation = 0;
-//	char auxChar;
-//	printf("¿Confirmar acción? ( S - N )");
-//	fflush( stdin );
-//	fgets(auxChar, 1, stdin);
-//  auxChar[strlen(auxChar)-1] = '\0';
-//	if ( auxChar == 's' || auxChar == 'S') {
-//		validation = 1;
-//	}
-//	return validation;
-//}
+int doYouConfirm(void) {
+	int validation;
+	validation = 0;
+	char auxChar;
+	printf("¿Confirmar acción? ( S - N )");
+	fflush( stdin );
+	scanf("%c", &auxChar);
+	if ( auxChar == 's' || auxChar == 'S') {
+		validation = 1;
+	}
+	return validation;
+}

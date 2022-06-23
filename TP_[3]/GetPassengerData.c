@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #include "GetData.h"
 
 /**
@@ -24,7 +25,8 @@ int getPassengersName(char pName[], int len_char, int tries) {
 	validation = -1;
 	if (pName != NULL && tries >= 0 && len_char > 0){
 		validation =  askArrayOfLettersValue(pName, len_char,
-			"\n====================================================================================================================\n"
+			"\n============================================================================================"
+			"=============================================================\n"
 			"\nIngrese el nombre del pasajero: ",
 			"\nEl nombre ingresado no es correcto.\nPor favor, ingrese sólo letras o espacios. Ejemplo: 'Maria Dolores'.\n", tries);
 	}
@@ -44,7 +46,8 @@ int getPassengersLastName(char pLastName[], int len_char, int tries) {
 	validation = -1;
 	if (pLastName != NULL && tries > 0 && len_char > 0){
 		validation =  askArrayOfLettersValue(pLastName, len_char,
-					"\n====================================================================================================================\n"
+					"\n==========================================================================================================="
+					"==============================================\n"
 					"\nIngrese el apellido del pasajero: ",
 					"\nEl apellido ingresado no es correcto.\nPor favor, ingrese sólo letras o espacios. Ejemplo: 'Maria Dolores'.\n", tries);
 	}
@@ -65,9 +68,34 @@ int getPassengersType(int *pPaxType, int tries) {
 	validation = -1;
 	if (pPaxType != NULL && tries > 0){
 		validation = askIntValue(pPaxType,
-				"\n====================================================================================================================\n"
+				"\n======================================================================================================"
+				"===================================================\n"
 				"\nIngrese tipo de pasajero:\n"
 				"\n1. First Class | 2. Executive Class | 3. Economy Class\n",
+				"\nLa opción ingresada no es correcta.\nPor favor, ingrese una opción entre 1 y 3, de acuerdo a los valores.\n",
+				1, 3, tries);
+	}
+	return validation;
+}
+
+/**
+* \brief Asks the end user for the flight´s status
+* \param int pointer to selected option
+* \param int minimum accepted value
+* \param int maximum accepted value
+* \param int number of tries the user has
+* \return Int - 0 : success - (-1) : error
+*
+*/
+int getStatusFlight(int *pStatusFlight, int tries) {
+	int validation;
+	validation = -1;
+	if (pStatusFlight != NULL && tries > 0){
+		validation = askIntValue(pStatusFlight,
+				"\n========================================================================================================="
+				"================================================\n"
+				"\nIngrese estado del vuelo:\n"
+				"\n1. En horario | 2. En vuelo | 3. Aterrizado\n",
 				"\nLa opción ingresada no es correcta.\nPor favor, ingrese una opción entre 1 y 3, de acuerdo a los valores.\n",
 				1, 3, tries);
 	}
@@ -87,9 +115,15 @@ int getPassengersFlightCode(char pFlightCode[], int len_char, int tries) {
 	validation = -1;
 	if (pFlightCode != NULL && tries > 0 && len_char > 0){
 		validation =  askArrayOfLettersAndNumbersValue(pFlightCode, len_char,
-				"\n====================================================================================================================\n"
+				"\n======================================================================================"
+				"===================================================================\n"
 				"\nIngrese el código del vuelo: ",
 				"\nEl código ingresado no es correcto.\nPor favor, ingrese sólo letras o numeros. Ejemplo: 'MDQ082903'.\n", tries);
+		if (!validation) {
+			for (int i = 0; pFlightCode[i] != '\0'; i++){
+				pFlightCode[i] = toupper(pFlightCode[i]);
+			}
+		}
 	}
 	return validation;
 }
@@ -108,7 +142,8 @@ int getPassengersPrice(float *pPrice, float minimumValue, float maximumValue, in
 	validation = -1;
 	if (pPrice != NULL && tries >= 0 && minimumValue < maximumValue){
 		validation = askFloatValue(pPrice,
-				"\n====================================================================================================================\n"
+				"\n==============================================================================================="
+				"==========================================================\n"
 				"\nIngrese el precio del vuelo: \n",
 				"\nEl precio ingresado no es correcto.\nPor favor, ingrese un nuevo valor.\n",
 				minimumValue, maximumValue, tries);

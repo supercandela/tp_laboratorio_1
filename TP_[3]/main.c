@@ -13,83 +13,134 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Controller.h"
-#include "Passenger.h"
 #include "MenusReportsOthers.h"
 #include "GetData.h"
+
+#include "Passenger.h"
+#include "GetPassengerData.h"
 
 int main() {
 	setbuf(stdout, NULL);
 
 	int exitValueGetOption;
 	int menuOption;
+	int flagLoadFile;
 
 	printWellcomeMessage();
 
 	LinkedList* listaPasajeros = ll_newLinkedList();
+	flagLoadFile = 0;
 
-	do {
-		printPrincipalMenu();
-		fflush(stdin);
-		exitValueGetOption = askIntValue(&menuOption,
-				"\n====================================================================================================================\n"
-				"\nIngrese una opción: ", "La opción ingresada no es correcta.", 1, 10, 3);
+	if (listaPasajeros != NULL) {
+		do {
+				printPrincipalMenu();
+				fflush(stdin);
+				exitValueGetOption = askIntValue(&menuOption,
+						"\n=============================================================================="
+						"===========================================================================\n"
+						"\nIngrese una opción: ", "\n=============================================================================="
+						"===========================================================================\n"
+						"\nLa opción ingresada no es correcta.", 1, 10, 3);
 
-		if (exitValueGetOption == 0) {
-			switch (menuOption) {
-			case 1:
-				if (controller_loadFromText("data.csv", listaPasajeros) != 0) {
-					printf("\nNo se pueden cargar los datos de los pasajeros desde el archivo en este momento.\n");
+				if (exitValueGetOption == 0) {
+					switch (menuOption) {
+					case 1:
+						if (flagLoadFile == 0) {
+							if (controller_loadFromText("data.csv", listaPasajeros) != 0) {
+								printf("\nNo se pueden cargar los datos de los pasajeros desde el archivo en este momento.\n");
+							} else {
+								flagLoadFile = 1;
+								printSeparationLine();
+								printf("\nArchivo cargado exitosamente.\n");
+							}
+						} else {
+							printSeparationLine();
+							printf("\nNo puede repetir la carga del archivo.\n");
+						}
+						break;
+					case 2:
+						if (flagLoadFile == 0) {
+							if (controller_loadFromBinary("data.bin", listaPasajeros) != 0) {
+								printf("\nNo se pueden cargar los datos de los pasajeros desde el archivo en este momento.\n");
+							} else {
+								flagLoadFile = 1;
+								printSeparationLine();
+								printf("\nArchivo cargado exitosamente.\n");
+							}
+						} else {
+							printSeparationLine();
+							printf("\nNo puede repetir la carga del archivo.\n");
+						}
+						break;
+					case 3:
+						if (controller_addPassenger(listaPasajeros) != 0) {
+							printf("\nNo se pueden agregar pasajeros en este momento.\n");
+						}
+						break;
+					case 4:
+						if (ll_isEmpty(listaPasajeros) != 0) {
+							printErrorNoPassengers();
+						} else if (controller_editPassenger(listaPasajeros) != 0) {
+							printf("\nNo se puede editar pasajeros en este momento.\n");
+						}
+						break;
+					case 5:
+						if (ll_isEmpty(listaPasajeros) != 0) {
+							printErrorNoPassengers();
+						} else if (controller_removePassenger(listaPasajeros) != 0) {
+							printf("\nNo se puede borrar pasajeros en este momento.\n");
+						}
+						break;
+					case 6:
+						if (ll_isEmpty(listaPasajeros) != 0) {
+							printErrorNoPassengers();
+						} else if (controller_ListPassenger(listaPasajeros) != 0) {
+							printf("\nNo se pueden listar los pasajeros en este momento.\n");
+						}
+						break;
+					case 7:
+						if (ll_isEmpty(listaPasajeros) != 0) {
+							printErrorNoPassengers();
+						} else if (controller_sortPassenger(listaPasajeros) != 0) {
+							printf("\nNo se pueden ordenar los pasajeros en este momento.\n");
+						}
+						break;
+					case 8:
+						if (ll_isEmpty(listaPasajeros) != 0) {
+							printErrorNoPassengers();
+						} else if (controller_saveAsText("data.csv", listaPasajeros) != 0) {
+							printf("\nNo se pueden ordenar los pasajeros en este momento.\n");
+						} else {
+							printSeparationLine();
+							printf("\nArchivo guardado exitosamente.\n");
+						}
+						break;
+					case 9:
+						if (ll_isEmpty(listaPasajeros) != 0) {
+							printErrorNoPassengers();
+						} else if (controller_saveAsBinary("data.bin", listaPasajeros) != 0) {
+							printf("\nNo se pueden guardar los pasajeros en este momento.\n");
+						} else {
+							printSeparationLine();
+							printf("\nArchivo guardado exitosamente.\n");
+						}
+						break;
+					case 10:
+						printSeparationLine();
+						printf("\nUsted salió del programa. Para continuar trabajando, vuelva a iniciar.\n");
+						printSeparationLine();
+						break;
+					}
 				}
-				break;
-			case 2:
-				printf(" 2. Cargar los datos de los pasajeros desde el archivo data.csv (modo binario).\n");
-//				int controller_loadFromBinary(char* path , LinkedList* pArrayListPassenger);
-				break;
-			case 3:
-				if (controller_addPassenger(listaPasajeros) != 0) {
-					printf("\nNo se pueden agregar pasajeros en este momento.\n");
-				}
-				break;
-			case 4:
-				printf(" 4. Modificar datos de pasajero\n");
-//				int controller_editPassenger(LinkedList* pArrayListPassenger);
-				break;
-			case 5:
-				printf(" 5. Baja de pasajero\n");
-//				int controller_removePassenger(LinkedList* pArrayListPassenger);
-				break;
-			case 6:
-				if (controller_ListPassenger(listaPasajeros) != 0) {
-					printf("\nNo se pueden listar los pasajeros en este momento.\n");
-				}
-				break;
-			case 7:
-				printf(" 7. Ordenar pasajeros\n");
-//				int controller_sortPassenger(LinkedList* pArrayListPassenger);
-				break;
-			case 8:
-				printf(" 8. Guardar los datos de los pasajeros en el archivo data.csv (modo texto).\n");
-//				int controller_saveAsText(char* path , LinkedList* pArrayListPassenger);
-				break;
-			case 9:
-				printf(" 9. Guardar los datos de los pasajeros en el archivo data.csv (modo binario).\n");
-//				int controller_saveAsBinary(char* path , LinkedList* pArrayListPassenger);
-				break;
-			case 10:
-				printf("\n============================================================================================="
-						"=======================\n"
-						"\nUsted salió del programa. Para continuar trabajando, vuelva a iniciar.\n"
-						"\n============================================================================================="
-						"=======================\n");
-				break;
+			} while (menuOption != 10 && exitValueGetOption == 0);
+
+			if (exitValueGetOption < 0) {
+				printSeparationLine();
+				printf("\nLa opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos.");
 			}
-		}
-	} while (menuOption != 10 && exitValueGetOption == 0);
-
-	if (exitValueGetOption < 0) {
-		printf("\n======================================================================================================="
-				"=============\n");
-		printf("\nLa opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos.");
+	} else {
+		printSeparationLine();
+		printf("\nOcurrió un error. Vuelva a intentarlo en unos minutos.");
 	}
 
 	return 0;
