@@ -23,7 +23,7 @@
 
 
 //INCLUDE LIBRARY TO TEST
-#include "../../inc/LinkedList.h"
+#include "../../src/LinkedList.h"
 #include "../../testing/inc/Employee.h"
 
 //DEFINES OF THIS TEST
