@@ -604,3 +604,70 @@ int controller_saveAsBinary(char *path, LinkedList *pArrayListPassenger) {
 	return validation;
 }
 
+/** \brief Guarda los datos de los pasajeros en el archivo data.csv (modo binario).
+ *
+ * \param path char*
+ * \param pArrayListPassenger LinkedList*
+ * \return int
+ *
+ */
+int controller_reports(LinkedList *pArrayListPassenger) {
+	int validation;
+	validation = -1;
+	int exitValueGetOptionSubMenu;
+	int submenuOption;
+	char pFlightCode[LEN_TEXT_CHAR];
+	LinkedList * listaPorVuelo;
+	int cantidad;
+	if (pArrayListPassenger != NULL) {
+		do {
+			printSubMenuReports();
+			exitValueGetOptionSubMenu = askIntValue(&submenuOption,
+							"\n================================================================================"
+							"=========================================================================\n\nIngrese una opción: ",
+							"La opción ingresada no es correcta.", 1, 4, 3);
+			if (exitValueGetOptionSubMenu == 0) {
+				switch (submenuOption) {
+				case 1:
+					printf(" 1. Pasajeros por clase\n");
+					if (pArrayListPassenger != NULL) {
+						cantidad = ll_count(pArrayListPassenger, Passenger_CountByType);
+					}
+					break;
+				case 2:
+					if (pArrayListPassenger != NULL) {
+						do {
+							if (printPassengers(pArrayListPassenger) == 0 &&
+									askArrayOfLettersAndNumbersValue(pFlightCode, LEN_TEXT_CHAR,
+									"\n======================================================================================"
+									"===================================================================\n"
+									"\nIngrese el código del vuelo que quiere salvar: ",
+									"\nEl código ingresado no es correcto.\nPor favor, ingrese sólo letras o numeros. "
+									"Ejemplo: 'MDQ082903'.\n", 3) == 0) {
+								listaPorVuelo = ll_filter(pArrayListPassenger, Passenger_SearchByCode);
+								if (listaPorVuelo != NULL) {
+									controller_saveAsText("listadoPorCodigo.csv", listaPorVuelo);
+								}
+							} else {
+								printf("\nNo se pueden listar los pasajeros en este momento.\n");
+							}
+							printf("\n¿Generar otro archivo?\n");
+						} while (doYouConfirm());
+					}
+					break;
+				case 3:
+					printf(" 3. Calcular millas acumuladas\n");
+					break;
+				case 4:
+					break;
+				}
+			}
+			if (exitValueGetOptionSubMenu < 0) {
+				printSeparationLine();
+				printf("\nLa opción ingresada no es válida y se quedó sin intentos.\nVuelva a intentarlo en unos minutos.");
+			}
+			validation = 0;
+		} while (submenuOption != 4 && exitValueGetOptionSubMenu == 0);
+	}
+	return validation;
+}

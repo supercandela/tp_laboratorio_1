@@ -441,3 +441,77 @@ int ll_sort(LinkedList *this, int (*pFunc)(void*, void*), int order) {
 	return returnAux;
 }
 
+/** \brief Contador de elementos
+ * \param pList LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion
+ * \return int Retorna  (-1) Error: si el puntero a la listas es NULL ( entero) con el valor de la cuenta
+ */
+int ll_count(LinkedList* this, int (*fn)(void* element)) {
+	int count;
+	int len;
+	void * auxElement = NULL;
+	count = -1;
+	if (this != NULL && fn != NULL) {
+		len = ll_len(this);
+		for (int i = 0; i < len; i++) {
+			auxElement = ll_get(this, i);
+			Passenger_CountByType(auxElement);
+			if() {
+				count++;
+			}
+		}
+	}
+	return count;
+
+//La función “fn” devolverá la cantidad que debe contarse.
+//La función “ll_count” almacenará un acumulador al cual sumará el valor de retorno de “fn” en cada iteración.
+//Al finalizar las iteraciones, la función “ll_count” devolverá el valor acumulado.
+}
+
+/** \brief
+ * \param pList LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion
+ * \return int Retorna  (-1) Error: si el puntero a la listas es NULL ( entero) con el valor de la cuenta
+ */
+LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element)) {
+	LinkedList * filteredList = NULL;
+	int len;
+	void * auxElement = NULL;
+
+	if (this != NULL && fn != NULL) {
+		len = ll_len(this);
+		filteredList = ll_newLinkedList();
+		if (filteredList != NULL) {
+			for (int i = 0; i < len; i++) {
+				auxElement = ll_get(this, i);
+				if (!Passenger_SearchByCode(auxElement)) {
+					ll_add(filteredList, auxElement);
+				}
+			}
+		}
+	}
+	return filteredList;
+}
+
+
+LinkedList* ll_map(LinkedList* this, void (*fn)(void* element)) {
+	LinkedList * nuevaLista = NULL;
+	int len;
+	void * auxElement = NULL;
+	if (this != NULL && fn != NULL) {
+		len = ll_len(this);
+		nuevaLista = ll_newLinkedList();
+		if (nuevaLista != NULL) {
+			for (int i = 0; i < len; i++) {
+				auxElement = ll_get(this, i);
+				if (!Passenger_SearchByCode(auxElement)) {
+
+					ll_add(nuevaLista, auxElement);
+
+
+				}
+			}
+		}
+	}
+	return nuevaLista;
+}

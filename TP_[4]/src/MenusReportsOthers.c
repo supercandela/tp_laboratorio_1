@@ -71,7 +71,8 @@ void printPrincipalMenu() {
 	printf(" 7. Ordenar pasajeros\n");
 	printf(" 8. Guardar los datos de los pasajeros en el archivo data.csv (modo texto).\n");
 	printf(" 9. Guardar los datos de los pasajeros en el archivo data.csv (modo binario).\n");
-	printf("10. Salir\n");
+	printf("10. Informes\n");
+	printf("11. Salir\n");
 }
 
 /**
@@ -207,4 +208,19 @@ void printSubMenuSortPax() {
 	printf(" 7. Ordenar pasajeros por Precio - Ascendente.\n");
 	printf(" 8. Ordenar pasajeros por Precio - Descendente.\n");
 	printf(" 9. Salir\n");
+}
+
+/**
+* \brief Prints the sub menu to create the reports
+* \param void
+* \return void
+*
+*/
+void printSubMenuReports() {
+	printSeparationLine();
+	printf("OPCIONES:\n");
+	printf(" 1. Pasajeros por clase\n");
+	printf(" 2. Generar archivo de vuelos\n");
+	printf(" 3. Calcular millas acumuladas\n");
+	printf(" 4. Salir\n");
 }

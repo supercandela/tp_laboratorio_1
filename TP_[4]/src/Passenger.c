@@ -13,6 +13,9 @@
 #include "GetData.h"
 
 #define LEN_CHAR_TEXT 50
+#define FIRSTCLASS 1
+#define EXECUTIVECLASS 2
+#define ECONOMYCLASS 3
 
 /**
  * \brief Reserva un espacio de memoria para un pasajero y lo inicializa
@@ -594,3 +597,78 @@ int Passenger_compareByPrecio (Passenger * pasajeroUno, Passenger * pasajeroDos)
 	}
 	return retorno;
 }
+
+/**
+ * \brief
+ * \param Passenger puntero
+ * \return Int: -1 si error. Tipo de pasajero para éxito
+ *
+ */
+int Passenger_CountByType (Passenger * pax) {
+	int auxTipoPax;
+	auxTipoPax = -1;
+	if (pax != NULL) {
+		Passenger_getTipoPasajero(pax, &auxTipoPax);
+	}
+	return auxTipoPax;
+}
+
+/**
+ * \brief
+ * \param Passenger puntero
+ * \return Int: -1 si error. 0 si el código de vuelo coincide
+ *
+ */
+int Passenger_SearchByCode (Passenger * pax) {
+	int validation;
+	validation = -1;
+	char auxCodigo[LEN_CHAR_TEXT];
+	if (pax != NULL) {
+		Passenger_getCodigoVuelo(pax, auxCodigo, LEN_CHAR_TEXT);
+		validation = strcmp(auxCodigo, codigoDelUsuario);
+	}
+	return validation;
+}
+
+/**
+ * \brief
+ * \param Passenger puntero
+ * \return void
+ *
+ */
+void Passenger_CalcularMillas (Passenger * pax) {
+	float auxPrecio;
+	int auxTipoPasajero;
+	int millasAEntregar;
+	int valorUnitarioMilla;
+	valorUnitarioMilla = 100;
+	if (pax != NULL) {
+		Passenger_getPrecio(pax, &auxPrecio);
+		Passenger_getTipoPasajero(pax, &auxTipoPasajero);
+
+		millasAEntregar = auxPrecio / valorUnitarioMilla;
+		if (auxTipoPasajero == FIRSTCLASS) {
+			millasAEntregar = millasAEntregar * 2;
+		} else if (auxTipoPasajero == EXECUTIVECLASS) {
+			millasAEntregar = millasAEntregar * 3;
+		}
+
+
+
+//		se deberá informar el listado de pasajeros con una columna extra
+//		que indicará las millas que se acumularon con ese vuelo según el siguiente criterio:
+//
+//
+//
+//		Para el desarrollo de este punto se deberá crear la función “ll_map()”, que permitirá calcular
+//		el campo millas.
+
+//		Prototipo de la función:
+//		La función “ll_map” recibirá una lista y una función “fn”. Se deberá iterar todos los elementos
+//		de la lista y pasárselos a la función “fn”. La función “fn” podrá realizar un cálculo con el
+//		elemento recibido y modificar alguno de sus campos si es necesario. Al finalizar la iteración,
+//		los elementos de la lista quedarán modificados.
+	}
+}
+
+

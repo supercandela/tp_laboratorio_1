@@ -40,7 +40,7 @@ int main() {
 						"===========================================================================\n"
 						"\nIngrese una opción: ", "\n=============================================================================="
 						"===========================================================================\n"
-						"\nLa opción ingresada no es correcta.", 1, 10, 3);
+						"\nLa opción ingresada no es correcta.", 1, 11, 3);
 
 				if (exitValueGetOption == 0) {
 					switch (menuOption) {
@@ -109,6 +109,7 @@ int main() {
 						if (ll_isEmpty(listaPasajeros) != 0) {
 							printErrorNoPassengers();
 						} else if (controller_saveAsText("data.csv", listaPasajeros) != 0) {
+							printSeparationLine();
 							printf("\nNo se pueden ordenar los pasajeros en este momento.\n");
 						} else {
 							printSeparationLine();
@@ -119,6 +120,7 @@ int main() {
 						if (ll_isEmpty(listaPasajeros) != 0) {
 							printErrorNoPassengers();
 						} else if (controller_saveAsBinary("data.bin", listaPasajeros) != 0) {
+							printSeparationLine();
 							printf("\nNo se pueden guardar los pasajeros en este momento.\n");
 						} else {
 							printSeparationLine();
@@ -126,13 +128,21 @@ int main() {
 						}
 						break;
 					case 10:
+						if (ll_isEmpty(listaPasajeros) != 0) {
+							printErrorNoPassengers();
+						} else if (controller_reports(listaPasajeros) != 0) {
+							printSeparationLine();
+							printf("\nNo se pueden generar reportes en este momento.\n");
+						}
+						break;
+					case 11:
 						printSeparationLine();
 						printf("\nUsted salió del programa. Para continuar trabajando, vuelva a iniciar.\n");
 						printSeparationLine();
 						break;
 					}
 				}
-			} while (menuOption != 10 && exitValueGetOption == 0);
+			} while (menuOption != 11 && exitValueGetOption == 0);
 
 			if (exitValueGetOption < 0) {
 				printSeparationLine();

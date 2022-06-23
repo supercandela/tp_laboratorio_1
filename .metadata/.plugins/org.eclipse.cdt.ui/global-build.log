@@ -10,3 +10,98 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\
 gcc -o TP_[4] "src\\Controller.o" "src\\GetData.o" "src\\GetPassengerData.o" "src\\LinkedList.o" "src\\MenusReportsOthers.o" "src\\Passenger.o" "src\\main.o" "src\\parser.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
 Info: Nothing to build for TP_[4]
 Info: Nothing to build for TP_[4]
+19:06:23 **** Incremental Build of configuration Debug for project TP_[4] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP_[4] "src\\Controller.o" "src\\GetData.o" "src\\GetPassengerData.o" "src\\LinkedList.o" "src\\MenusReportsOthers.o" "src\\Passenger.o" "src\\main.o" "src\\parser.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
+Info: Nothing to build for TP_[4]
+19:20:11 **** Incremental Build of configuration Debug for project TP_[4] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_sortPassenger':
+..\src\Controller.c:439:39: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  439 |      if (ll_sort(pArrayListPassenger, Passenger_compareById, 1) == 0) {
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       int (*)(Passenger *, Passenger *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\src\Controller.c:4:
+..\src\../inc/LinkedList.h:55:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Passenger *, Passenger *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   55 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+..\src\Controller.c:444:39: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  444 |      if (ll_sort(pArrayListPassenger, Passenger_compareById, 0) == 0) {
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       int (*)(Passenger *, Passenger *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\src\Controller.c:4:
+..\src\../inc/LinkedList.h:55:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Passenger *, Passenger *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   55 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+..\src\Controller.c:449:39: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  449 |      if (ll_sort(pArrayListPassenger, Passenger_compareByApellido, 1) == 0) {
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       int (*)(Passenger *, Passenger *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\src\Controller.c:4:
+..\src\../inc/LinkedList.h:55:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Passenger *, Passenger *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   55 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+..\src\Controller.c:454:39: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  454 |      if (ll_sort(pArrayListPassenger, Passenger_compareByApellido, 0) == 0) {
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       int (*)(Passenger *, Passenger *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\src\Controller.c:4:
+..\src\../inc/LinkedList.h:55:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Passenger *, Passenger *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   55 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+..\src\Controller.c:459:39: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  459 |      if (ll_sort(pArrayListPassenger, Passenger_compareByType, 1) == 0) {
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       int (*)(Passenger *, Passenger *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\src\Controller.c:4:
+..\src\../inc/LinkedList.h:55:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Passenger *, Passenger *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   55 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+..\src\Controller.c:464:39: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  464 |      if (ll_sort(pArrayListPassenger, Passenger_compareByType, 0) == 0) {
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       int (*)(Passenger *, Passenger *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\src\Controller.c:4:
+..\src\../inc/LinkedList.h:55:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Passenger *, Passenger *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   55 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+..\src\Controller.c:469:39: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  469 |      if (ll_sort(pArrayListPassenger, Passenger_compareByPrecio, 1) == 0) {
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       int (*)(Passenger *, Passenger *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\src\Controller.c:4:
+..\src\../inc/LinkedList.h:55:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Passenger *, Passenger *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   55 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+..\src\Controller.c:474:39: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  474 |      if (ll_sort(pArrayListPassenger, Passenger_compareByPrecio, 0) == 0) {
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                       |
+      |                                       int (*)(Passenger *, Passenger *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\src\Controller.c:4:
+..\src\../inc/LinkedList.h:55:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Passenger *, Passenger *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   55 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenusReportsOthers.o" "..\\src\\MenusReportsOthers.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:133:18: warning: implicit declaration of function 'controller_reports' [-Wimplicit-function-declaration]
+  133 |       } else if (controller_reports(listaPasajeros) != 0) {
+      |                  ^~~~~~~~~~~~~~~~~~
+gcc -o TP_[4] "src\\Controller.o" "src\\GetData.o" "src\\GetPassengerData.o" "src\\LinkedList.o" "src\\MenusReportsOthers.o" "src\\Passenger.o" "src\\main.o" "src\\parser.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
+19:20:47 **** Incremental Build of configuration Debug for project TP_[4] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o TP_[4] "src\\Controller.o" "src\\GetData.o" "src\\GetPassengerData.o" "src\\LinkedList.o" "src\\MenusReportsOthers.o" "src\\Passenger.o" "src\\main.o" "src\\parser.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
+Info: Nothing to build for TP_[4]

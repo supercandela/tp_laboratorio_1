@@ -56,5 +56,7 @@ int Passenger_compareById (Passenger * pasajeroUno, Passenger * pasajeroDos);
 int Passenger_compareByApellido(Passenger * pasajeroUno, Passenger * pasajeroDos);
 int Passenger_compareByType (Passenger * pasajeroUno, Passenger * pasajeroDos);
 int Passenger_compareByPrecio (Passenger * pasajeroUno, Passenger * pasajeroDos);
+int Passenger_CountByType (Passenger * pax);
+int Passenger_SearchByCode (Passenger * pax);
 
 #endif /* PASSENGER_H_ */

@@ -17,5 +17,6 @@ void printPrincipalMenu();
 void printSubMenuAddPax(char name[], char lastName[], int passengerType, char flightCode[], float price, int statusFlight);
 void printSubMenuEditPax(char name[], char lastName[], int passengerType, char flightCode[], float price, int statusFlight);
 void printSubMenuSortPax();
+void printSubMenuReports();
 
 #endif /* MENUSREPORTSOTHERS_H_ */
